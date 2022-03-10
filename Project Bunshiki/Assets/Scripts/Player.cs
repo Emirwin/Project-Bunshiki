@@ -6,10 +6,13 @@ public class Player : MonoBehaviour
 {
     public float playerSpeed = 5.0f;
     private Vector2 playerMovement;
+    public GameObject playerBullet;
+    public GameObject gameManager;
+ 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -23,10 +26,22 @@ public class Player : MonoBehaviour
         MovePlayer(playerMovement);
 
         //When space is pressed, shoot
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            //Debug.Log("bang!");
+            ShootBullet(playerBullet, this.gameObject);
+        }
     }
 
     void MovePlayer(Vector2 direction)
     {
         transform.Translate(direction * Time.deltaTime * playerSpeed);
     }
+
+    public void ShootBullet(GameObject bullet, GameObject source)
+    {
+        Vector3 bulletPosition = new Vector3(transform.position.x,transform.position.y + 0.5f,0);
+        Instantiate(bullet,bulletPosition,Quaternion.identity,gameManager.transform);
+    }
+
 }
