@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public bool isActive = false;
-    public int duration = 5;
-    void Awake()
+    public Sentence[] sentenceAmmo;
+    void Start()
     {
-        isActive = true;
+        Debug.Log("Attacking!");
+        Instantiate(sentenceAmmo[0]);
+        Destroy(gameObject);
     }
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("I am attacking!");
+        
     }
+
 }

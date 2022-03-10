@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float playerSpeed = 5.0f;
+    public int playerHitPoints = 12;
     private Vector2 playerMovement;
     public GameObject playerBullet;
     public GameObject gameManager;
@@ -30,6 +31,15 @@ public class Player : MonoBehaviour
         {
             //Debug.Log("bang!");
             ShootBullet(playerBullet, this.gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("EnemyBullet"))
+        {
+            Debug.Log("Took Damage!");
+            playerHitPoints--;
         }
     }
 

@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 922652098}
   m_Layer: 0
   m_Name: TopWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -595,51 +595,6 @@ Transform:
   m_Father: {fileID: 364070876}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!1 &1064566231
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1064566233}
-  - component: {fileID: 1064566232}
-  m_Layer: 0
-  m_Name: SampleAttack
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1064566232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064566231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88bdb75b662a76a439726055f6b80a83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isActive: 0
-  duration: 5
---- !u!4 &1064566233
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064566231}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1173471983
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,7 +740,7 @@ GameObject:
   - component: {fileID: 1200174718}
   m_Layer: 0
   m_Name: BottomWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -978,6 +933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 5
+  playerHitPoints: 12
   playerBullet: {fileID: 5822185504028213785, guid: 7fa94f63e9e8a1b4191d1980b77440c4, type: 3}
   gameManager: {fileID: 1711773072}
 --- !u!50 &2019879044
@@ -1127,7 +1083,7 @@ MonoBehaviour:
   hitPoints: 10
   enemySpeed: 0
   enemyAttacks:
-  - {fileID: 1064566232}
+  - {fileID: 926532190739911185, guid: b6191d7add57d41478f48d120b73fec5, type: 3}
 --- !u!50 &2133296956
 Rigidbody2D:
   serializedVersion: 4

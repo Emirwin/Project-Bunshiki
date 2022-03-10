@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("doAttack",2.0f,3.0f);
     }
 
     // Update is called once per frame
@@ -21,8 +21,6 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
-        //performAttack();
 
         //moveEnemy();
     }
@@ -33,7 +31,7 @@ public class Enemy : MonoBehaviour
         hitPoints--;
     }
 
-    public virtual void performAttack()
+    public virtual void doAttack()
     {
         Instantiate(enemyAttacks[0]);
     }
