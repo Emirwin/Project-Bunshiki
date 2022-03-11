@@ -5,7 +5,6 @@ using UnityEngine;
 public class DestroyBullet : MonoBehaviour
 {
     public int bulletHitPoints = 1;
-    
     void Update()
     {
         if(bulletHitPoints==0)
