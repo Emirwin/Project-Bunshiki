@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2890bcb7e9872094a8408facbd0b22db, type: 3}
+  m_Name: ageru
+  m_EditorClassIdentifier: 
+  KANJI: "\u4E0A\u3052\u308B"
+  FURIGANA: "\u3042\u3052\u308B"
+  ROMAJI: ageru
+  MEANINGS:
+  - 'Meaning 01: to raise; to elevate'
+  - 'Meaning 02: to do up (one''s hair)'
+  - 'Meaning 03: to fly (a kite  etc.); to launch (fireworks  etc.);'
+  - 'Meaning 04: to land (a boat)'
+  - 'Meaning 05: to deep-fry'
+  PARTOFSPEECH:
+  - Ichidan verb
+  - Transitive verb
+  COMMON: TRUE

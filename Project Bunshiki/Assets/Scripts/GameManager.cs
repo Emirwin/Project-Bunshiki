@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public string weakPoint = "";
+    public string weakPoint = ""; //For POSAttacks
     // Start is called before the first frame update
     void Start()
     {

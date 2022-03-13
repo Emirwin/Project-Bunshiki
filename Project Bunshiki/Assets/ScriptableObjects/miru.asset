@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2890bcb7e9872094a8408facbd0b22db, type: 3}
+  m_Name: miru
+  m_EditorClassIdentifier: 
+  KANJI: "\u898B\u308B"
+  FURIGANA: "\u307F\u308B"
+  ROMAJI: miru
+  MEANINGS:
+  - 'Meaning 01: to see; to look; to watch; to view; to observe'
+  - 'Meaning 02: to examine; to look over; to assess; to check; to judge'
+  - 'Meaning 03: to look after; to attend to; to take care of; to keep an eye on'
+  - 'Meaning 04: to experience; to Meet with (misfortune  success  etc.)'
+  - 'Meaning 05: to try ...; to have a go at ...; to give ... a try'
+  PARTOFSPEECH:
+  - Ichidan verb
+  - Transitive verb
+  COMMON: TRUE

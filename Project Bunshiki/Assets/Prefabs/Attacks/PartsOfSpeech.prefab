@@ -40,13 +40,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 926532190739911198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88bdb75b662a76a439726055f6b80a83, type: 3}
+  m_Script: {fileID: 11500000, guid: 125806a0e1056904f8500a4951f9cf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sentenceAmmo:
-  - {fileID: 8906417867075482876, guid: 0dc4c933cd0f8c14b9d03bbdd784db84, type: 3}
-  - {fileID: 8906417867075482876, guid: 10fd1a9ca70332e43b24746285491ab4, type: 3}
-  - {fileID: 8906417867075482876, guid: e6b6e43a5437ee746a1473f394b3e37b, type: 3}
-  - {fileID: 8906417867075482876, guid: c6666d5ba9677214ba4ad9ae6cc81c3a, type: 3}
-  - {fileID: 8906417867075482876, guid: 3232ecaceb4dc7b49992ad924b31f7f5, type: 3}
+  sentenceAmmo: []
   currentSentence: 0
+  gameManager: {fileID: 0}

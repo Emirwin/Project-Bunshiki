@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2890bcb7e9872094a8408facbd0b22db, type: 3}
+  m_Name: dekiru
+  m_EditorClassIdentifier: 
+  KANJI: "\u51FA\u6765\u308B"
+  FURIGANA: "\u3067\u304D\u308B"
+  ROMAJI: dekiru
+  MEANINGS:
+  - 'Meaning 01: to be able (in a position) to do; to be up to the task'
+  - 'Meaning 02: to be ready; to be completed'
+  - 'Meaning 03: to be Made; to be built '
+  - 'Meaning 04: to be good at; to be permitted (to do)'
+  - 'Meaning 05: to become intimate; to take up (with someone)'
+  PARTOFSPEECH:
+  - Ichidan verb
+  - Intransitive verb
+  COMMON: TRUE

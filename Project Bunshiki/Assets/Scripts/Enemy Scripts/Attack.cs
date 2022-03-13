@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attack : MonoBehaviour
+public abstract class Attack : MonoBehaviour
 {
     public Sentence[] sentenceAmmo;
     public int currentSentence = 0;
