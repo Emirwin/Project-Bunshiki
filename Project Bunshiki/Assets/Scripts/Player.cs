@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public float playerSpeed = 5.0f;
     public int playerHitPoints = 12;
+    public int playerManaPoints = 6;
     private Vector2 playerMovement;
     public GameObject playerBullet;
     public GameObject gameManager;
@@ -40,6 +41,8 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Took Damage!");
             playerHitPoints--;
+
+            gameManager.GetComponent<GameManager>().playerTakeDamage();
         }
     }
 

@@ -8,17 +8,35 @@ public partial class GameManager : MonoBehaviour
     public int sightNewPosition = 0;
     private bool fixSight = true;
 
+    public GameObject playerObject;
+    public Player playerScript;
+    public GameObject healthBar;
+    public BarScript hpScript;
+    public GameObject manaBar;
+    
+
     public string weakPoint = ""; //For POSAttacks
+
+    void Awake()
+    {
+        hpScript = healthBar.GetComponent<BarScript>();
+        playerScript = playerObject.GetComponent<Player>();
+    }
     // Start is called before the first frame update
     void Start()
     {
-        
+        hpScript.InitializeBar(playerScript.playerHitPoints);
     }
 
     // Update is called once per frame
     void Update()
     {
         MoveSight();
+    }
+
+    public void playerTakeDamage()
+    {
+        hpScript.updateBar(-1);
     }
 
     public void ChangeScreen(string screenName)
