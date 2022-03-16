@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Word objects for the sight specifically
 public class Word : MonoBehaviour
 {
     public int hitPoints = 6;
