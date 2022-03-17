@@ -5,18 +5,18 @@ using TMPro;
 
 public class BarScript : MonoBehaviour
 {
-    public TextMeshPro currHealthValue;
-    public int currHealth;
+    public TextMeshPro currValueText;
+    public int currValue;
     // Start is called before the first frame update
     public void InitializeBar(int number)
     {
-        currHealth = number;
+        currValue = number;
         updateBar(0);
     }
 
     public void updateBar(int number)
     {
-        currHealth += number;
-        currHealthValue.text = $"{currHealth}";
+        currValue += number;
+        currValueText.text = $"{currValue}";
     }
 }

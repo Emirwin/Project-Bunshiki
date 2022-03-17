@@ -9,10 +9,17 @@ public class YakuyakiChoices : MonoBehaviour
     
     void Start()
     {
-        yakuyaki = GameObject.Find("Yakuyaki").GetComponent<Yakuyaki>();
+        yakuyaki = GameObject.FindGameObjectWithTag("ActiveSpell").GetComponent<Yakuyaki>();
     }
     void OnMouseDown()
     {
-        yakuyaki.UpdateScore(pointValue);
+        yakuyaki.activeProblem = GameObject.FindGameObjectWithTag("ActiveProblem");
+        if(pointValue>0)
+        {
+            yakuyaki.UpdateScore(pointValue);
+            yakuyaki.noActiveProblem = true;
+            Destroy(yakuyaki.activeProblem);
+        }
+        
     }
 }

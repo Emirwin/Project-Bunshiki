@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 125806a0e1056904f8500a4951f9cf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sentenceAmmo: []
+  sentenceAmmo:
+  - {fileID: 0}
   currentSentence: 0
   gameManager: {fileID: 0}

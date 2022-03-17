@@ -1189,7 +1189,7 @@ GameObject:
   - component: {fileID: 4906744679086268912}
   m_Layer: 0
   m_Name: Problem1
-  m_TagString: Untagged
+  m_TagString: ActiveProblem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

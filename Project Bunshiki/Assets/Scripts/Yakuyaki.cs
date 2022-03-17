@@ -7,15 +7,48 @@ public class Yakuyaki : Spell
 {
     public List<GameObject> problems;  //Problem prefabs
     private List<int> alreadySolved; //
+    public GameObject activeProblem;
+    public bool noActiveProblem = false;
+    private bool lastProblem = false;
+
+    public override void Update()
+    {
+        if(noActiveProblem && !lastProblem)
+        {
+            int randomChoice = Random.Range(0,problems.Count);
+            SpawnSentence(problems[randomChoice]);
+            problems.RemoveAt(randomChoice);
+            if(problems.Count == 0)
+            {
+                lastProblem = true;
+            }
+            noActiveProblem = false;
+        }
+        if(lastProblem && noActiveProblem)
+        {
+            spellManager.GetComponent<SpellManager>().onRitual = false;
+        }
+    }
     public override void StartRitual()
     {
         base.StartRitual();
-        SpawnSentence(problems[0]);
+        int randomChoice = Random.Range(0,problems.Count);
+        SpawnSentence(problems[randomChoice]); //Spawn first problem
+        problems.RemoveAt(randomChoice);
+        if(problems.Count == 0)
+        {
+            lastProblem = true;
+        }
     }
     
     public void SpawnSentence(GameObject problem)
     {
         Debug.Log($"Spawning {problem}");
-        Instantiate(problem);
+        Instantiate(problem, problem.transform.position, Quaternion.identity, gameObject.transform);
+
+        //activeProblem = GameObject.FindGameObjectWithTag("ActiveProblem");
+        //Debug.Log($"Active problem: {activeProblem}");
+        
+        
     }
 }

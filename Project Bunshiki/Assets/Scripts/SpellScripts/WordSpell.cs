@@ -3,21 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class WordSpell : MonoBehaviour
+public class WordSpell : MonoBehaviour //used by Nouns
 {
     public WordSO word;
-    private TextMeshPro wordMesh; 
+    protected TextMeshPro wordMesh; 
+
     // Start is called before the first frame update
     void Start()
     {
         wordMesh = gameObject.GetComponent<TextMeshPro>();
-        wordMesh.text = word.ROMAJI;
+        SetWordSpell();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public virtual void SetWordSpell()
+    {
+        string temp;
+        temp = word.ROMAJI;
+
+        wordMesh.text = temp;
     }
 
     void OnMouseDown()
