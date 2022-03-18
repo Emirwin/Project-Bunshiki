@@ -386,6 +386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spellManager: {fileID: 0}
+  manaCost: 4
   score: 0
   scoreUI: {fileID: 0}
   countdownUI: {fileID: 0}

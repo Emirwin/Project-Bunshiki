@@ -32,32 +32,57 @@ public class SpellManager : MonoBehaviour
     //StartSpell methods are called by the buttons.
     public void StartSpell(int spellNumber)
     {
-        Instantiate(activeSpells[spellNumber]);
-        onRitual = true;
+        if(gameManager.manaScript.currValue >= activeSpells[spellNumber].manaCost)
+        {
+            gameManager.manaScript.updateBar(-activeSpells[spellNumber].manaCost);
+            Instantiate(activeSpells[spellNumber]);
+            onRitual = true;
+        }
+        else
+        {
+            Debug.Log("Insufficient Mana");
+        }
+
     }
 
     public void StartSpell(string spellName)
     {
+        bool ritualFailed = false;
         int selectedSpell = -1;
         for(int i = 0; i < activeSpells.Length; i++)
         {
             if(string.Compare(activeSpells[i].name,spellName)==0)
             {
-                Instantiate(activeSpells[i]);
-                selectedSpell = i;
+                if(gameManager.manaScript.currValue >= activeSpells[i].manaCost)
+                {
+                    gameManager.manaScript.updateBar(-activeSpells[i].manaCost);
+                    Instantiate(activeSpells[i]);
+                    selectedSpell = i;
+                }
+                else
+                {
+                    Debug.Log("Insufficient Mana");
+                    ritualFailed = true;
+                }
             }
         }
-        onRitual = true;
-        spellIsActive = true;
-        
-        //spell is started, tell UI Manager to hide spell buttons
-        uiManager.spellButtons.SetActive(false);
-        //During the spell's duration, also hide the returnButton.
-        //After a set duration, the ritual/spell ends so set those buttons back to active
-        StartCoroutine(SpellCountdownRoutine(activeSpells[selectedSpell].durationSeconds));
 
-        
-        //EndRitual(FindObjectByTag("ActiveSpell"))
+        if(!ritualFailed)
+        {
+            onRitual = true;
+            spellIsActive = true;
+            
+            //spell is started, tell UI Manager to hide spell buttons
+            uiManager.spellButtons.SetActive(false);
+            uiManager.returnButton.SetActive(false);
+            //During the spell's duration, also hide the returnButton.
+            //After a set duration, the ritual/spell ends so set those buttons back to active
+            StartCoroutine(SpellCountdownRoutine(activeSpells[selectedSpell].durationSeconds));
+
+            
+            //EndRitual(FindObjectByTag("ActiveSpell"))
+        }
+
     }
 
     public void EndSpell()
