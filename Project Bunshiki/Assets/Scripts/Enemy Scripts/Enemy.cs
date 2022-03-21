@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     {
         if(hitPoints==0)
         {
+            //kill enemy
             Destroy(gameObject);
         }
 
@@ -30,7 +31,7 @@ public class Enemy : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(other);
-        hitPoints--;
+        //hitPoints--;
     }
 
     public virtual void doAttack()

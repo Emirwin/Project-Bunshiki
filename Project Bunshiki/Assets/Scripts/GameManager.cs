@@ -15,6 +15,10 @@ public partial class GameManager : MonoBehaviour
     public GameObject manaBar;
     public BarScript manaScript;
     
+    public GameObject enemyObject;
+    public Enemy enemyScript;
+    public GameObject enemyHealthBar;
+    public BarScript enemyHpScript;
 
     public string weakPoint = ""; //For POSAttacks
 
@@ -23,12 +27,17 @@ public partial class GameManager : MonoBehaviour
         hpScript = healthBar.GetComponent<BarScript>();
         manaScript = manaBar.GetComponent<BarScript>();
         playerScript = playerObject.GetComponent<Player>();
+
+        enemyHpScript = enemyHealthBar.GetComponent<BarScript>();
+        enemyScript = enemyObject.GetComponent<Enemy>();
     }
     // Start is called before the first frame update
     void Start()
     {
         hpScript.InitializeBar(playerScript.playerHitPoints);
         manaScript.InitializeBar(playerScript.playerManaPoints);
+
+        enemyHpScript.InitializeBar(enemyScript.hitPoints);
     }
 
     // Update is called once per frame
