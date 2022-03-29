@@ -74,13 +74,14 @@ public partial class GameManager : MonoBehaviour
             sightNewPosition = 0;
             fixSight = false;
             //make the sight return to normal speed
+            ChangeSpeed(2f);
         } 
         else if (string.Compare("spellScreen",screenName)==0)
         {
             sightNewPosition = -5;
             fixSight = false;
             //slow down the sight
-            ChangeSpeed(2);
+            ChangeSpeed(0.5f);
         }
         else if (string.Compare("inventoryScreen",screenName)==0)
         {
@@ -115,10 +116,22 @@ public partial class GameManager : MonoBehaviour
     void ChangeSpeed(float multiplier)
     {
         ChangeSpeedCurrentAttacks(multiplier, "EnemyAttack");
-        ChangeSpeedCurrentAttacks(multiplier, "Bullet");
+        ChangeSpeedCurrentBullets(multiplier, "Bullet");
 
         //tell enemy to make its attacks go slower/faster
+        enemyScript.attackSpeedModifier *= multiplier;
         //tell player to make its bullets go slower/faster
+        // if(multiplier<1)
+        // {
+        //     playerScript.bulletsSlowed = true;
+        // }
+        // else
+        // {
+        //     playerScript.bulletsSlowed = false;
+        // }
+
+        playerScript.bulletSpeedModifier *= multiplier;
+        
     }
 
     void ChangeSpeedCurrentAttacks(float multiplier, string tags)
@@ -128,7 +141,18 @@ public partial class GameManager : MonoBehaviour
 
         for(int i = 0; i < sceneEnemyAttacks.Length; i++)
         {
-            sceneEnemyAttacks[i].GetComponent<MoveDown>().speed*=multiplier;
+            sceneEnemyAttacks[i].GetComponent<MoveDown>().modifier*=multiplier;
+        }
+    }
+
+    void ChangeSpeedCurrentBullets(float multiplier, string tags)
+    {
+        GameObject[] scenePlayerBullets = GameObject.FindGameObjectsWithTag(tags);
+        Debug.Log(scenePlayerBullets);
+
+        for(int i = 0; i < scenePlayerBullets.Length; i++)
+        {
+            scenePlayerBullets[i].GetComponent<MoveUp>().modifier*=multiplier;
         }
     }
 }

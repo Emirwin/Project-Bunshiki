@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public float enemyAggression = 10.0f; //lower is more aggressive
     public Attack[] enemyAttacks;
     public int currentAttack = 0;
+    public float attackSpeedModifier = 1.0f;
 
     
     //public
@@ -47,7 +48,9 @@ public class Enemy : MonoBehaviour
 
     public virtual void doAttack()
     {
-        Instantiate(enemyAttacks[currentAttack%enemyAttacks.Length]);
+        Attack temp;
+        temp = Instantiate(enemyAttacks[currentAttack%enemyAttacks.Length]);
+        temp.attackSpeedModifier *= attackSpeedModifier;
         currentAttack++;
     }
 

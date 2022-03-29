@@ -8,7 +8,11 @@ public class Player : MonoBehaviour
     public int playerHitPoints = 12;
     public int playerManaPoints = 6;
     private Vector2 playerMovement;
+
     public GameObject playerBullet;
+    public bool bulletsSlowed = false;
+    public float bulletSpeedModifier = 1.0f;
+
     public GameObject gameManager;
 
     public Animator animator;
@@ -59,7 +63,14 @@ public class Player : MonoBehaviour
     public void ShootBullet(GameObject bullet, GameObject source)
     {
         Vector3 bulletPosition = new Vector3(transform.position.x,transform.position.y + 0.5f,0);
-        Instantiate(bullet,bulletPosition,Quaternion.identity,gameManager.transform);
+        GameObject temp;
+
+        temp = Instantiate(bullet,bulletPosition,Quaternion.identity,gameManager.transform);
+        
+        temp.GetComponent<MoveUp>().modifier *= bulletSpeedModifier;
+        
+
     }
+
 
 }
