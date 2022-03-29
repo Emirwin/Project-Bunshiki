@@ -9,7 +9,13 @@ public class Enemy : MonoBehaviour
     public float enemyAggression = 10.0f; //lower is more aggressive
     public Attack[] enemyAttacks;
     public int currentAttack = 0;
+
+    
     //public
+    void Awake()
+    {
+
+    }
     // Start is called before the first frame update
     void Start()
     {

@@ -24,8 +24,12 @@ public partial class GameManager : MonoBehaviour
     public GameObject attackSpawnPoint;
     public string weakPoint = ""; //For POSAttacks
 
+    public SpellManager spellManager;
+
     void Awake()
     {
+        spellManager = GameObject.Find("SpellManager").GetComponent<SpellManager>();
+
         hpScript = healthBar.GetComponent<BarScript>();
         manaScript = manaBar.GetComponent<BarScript>();
         playerScript = playerObject.GetComponent<Player>();
@@ -69,11 +73,14 @@ public partial class GameManager : MonoBehaviour
         {
             sightNewPosition = 0;
             fixSight = false;
+            //make the sight return to normal speed
         } 
         else if (string.Compare("spellScreen",screenName)==0)
         {
             sightNewPosition = -5;
             fixSight = false;
+            //slow down the sight
+            ChangeSpeed(2);
         }
         else if (string.Compare("inventoryScreen",screenName)==0)
         {
@@ -102,6 +109,26 @@ public partial class GameManager : MonoBehaviour
             {
                 fixSight = true;
             }
+        }
+    }
+
+    void ChangeSpeed(float multiplier)
+    {
+        ChangeSpeedCurrentAttacks(multiplier, "EnemyAttack");
+        ChangeSpeedCurrentAttacks(multiplier, "Bullet");
+
+        //tell enemy to make its attacks go slower/faster
+        //tell player to make its bullets go slower/faster
+    }
+
+    void ChangeSpeedCurrentAttacks(float multiplier, string tags)
+    {
+        GameObject[] sceneEnemyAttacks = GameObject.FindGameObjectsWithTag(tags);
+        Debug.Log(sceneEnemyAttacks);
+
+        for(int i = 0; i < sceneEnemyAttacks.Length; i++)
+        {
+            sceneEnemyAttacks[i].GetComponent<MoveDown>().speed*=multiplier;
         }
     }
 }

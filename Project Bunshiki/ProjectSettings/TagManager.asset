@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - ActiveSpell
   - ActiveProblem
+  - EnemyAttack
   layers:
   - Default
   - TransparentFX

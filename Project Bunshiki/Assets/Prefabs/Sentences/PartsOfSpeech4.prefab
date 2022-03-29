@@ -249,6 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: ec26fd5c48c4ffc418bb9a08444dbb14, type: 2}
+  wordPanelManager: {fileID: 0}
 --- !u!1 &2124143317346733399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,6 +1179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: 66d8a80a25ebf0c4b97565ebeafe1004, type: 2}
+  wordPanelManager: {fileID: 0}
 --- !u!1 &4109799354513927404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,6 +1429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: f349488e2dcd787489289b4e92aab6f3, type: 2}
+  wordPanelManager: {fileID: 0}
 --- !u!1 &4226821908495152551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,6 +1849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: 66a9165b1ca6fb344937c112602e503a, type: 2}
+  wordPanelManager: {fileID: 0}
   isNegative: 0
   isPast: 0
 --- !u!1 &5710878229502536487
@@ -2097,6 +2101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: 1d95418ce7929b141bdc54001f95096a, type: 2}
+  wordPanelManager: {fileID: 0}
 --- !u!1 &5907238288949817572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2516,6 +2521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: 3fc29ddd9b0013640974eda0c884cc2c, type: 2}
+  wordPanelManager: {fileID: 0}
   isNegative: 0
   isPolite: 1
   inflection: 12
@@ -2768,6 +2774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: 9e807fb2aa99f62489967f76c92a604a, type: 2}
+  wordPanelManager: {fileID: 0}
 --- !u!1 &7994729130635265785
 GameObject:
   m_ObjectHideFlags: 0
@@ -2951,7 +2958,7 @@ GameObject:
   - component: {fileID: 6425542817693148146}
   m_Layer: 0
   m_Name: PartsOfSpeech4
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2989,7 +2996,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d771bb9e1929bb4468a1364c56f49732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  words: []
 --- !u!114 &6425542817693148146
 MonoBehaviour:
   m_ObjectHideFlags: 0

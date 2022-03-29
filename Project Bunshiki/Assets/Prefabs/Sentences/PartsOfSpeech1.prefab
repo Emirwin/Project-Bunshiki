@@ -249,6 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: 8a384ab2273710d48b5a19f6ed3107c9, type: 2}
+  wordPanelManager: {fileID: 0}
   isNegative: 0
   isPast: 0
 --- !u!1 &2561562753935685231
@@ -1180,6 +1181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: ff5c76e2577a30242a069cc246ba2017, type: 2}
+  wordPanelManager: {fileID: 0}
 --- !u!1 &4226821908495152551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,6 +1601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: 18cdd2e0600fc6d43b2cb104f5810b25, type: 2}
+  wordPanelManager: {fileID: 0}
 --- !u!1 &5907238288949817572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2018,6 +2021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: adb54e51476e12b429ce80f6641424cb, type: 2}
+  wordPanelManager: {fileID: 0}
 --- !u!1 &7575671486880802632
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,6 +2271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: 67fdad3a425c21a4a957352e436897ea, type: 2}
+  wordPanelManager: {fileID: 0}
 --- !u!1 &7975721374562825619
 GameObject:
   m_ObjectHideFlags: 0
@@ -2516,6 +2521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: 6cc7cc859a708b4409e20e3525e1c6bc, type: 2}
+  wordPanelManager: {fileID: 0}
   isNegative: 0
   isPast: 0
   isPolite: 1
@@ -2532,7 +2538,7 @@ GameObject:
   - component: {fileID: 6425542817693148146}
   m_Layer: 0
   m_Name: PartsOfSpeech1
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2569,13 +2575,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d771bb9e1929bb4468a1364c56f49732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  words:
-  - {fileID: 6998952772979650468}
-  - {fileID: 8499591332258059283}
-  - {fileID: 5414473346554678731}
-  - {fileID: 3882600668787461995}
-  - {fileID: 5644343152296004743}
-  - {fileID: 1681897313906138603}
 --- !u!114 &6425542817693148146
 MonoBehaviour:
   m_ObjectHideFlags: 0

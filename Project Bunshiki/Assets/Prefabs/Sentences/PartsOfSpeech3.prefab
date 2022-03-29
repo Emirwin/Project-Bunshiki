@@ -589,6 +589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: 4a55fbfd450171d4fb3b2b9d1bedfcdb, type: 2}
+  wordPanelManager: {fileID: 0}
 --- !u!1 &4226821908495152551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,6 +1009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: 3e2ca47954face542ba964868428fa30, type: 2}
+  wordPanelManager: {fileID: 0}
   isNegative: 0
   isPast: 0
 --- !u!1 &5907238288949817572
@@ -1429,8 +1431,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: ae7dc5aa1c6e6c249bd422f356baa637, type: 2}
+  wordPanelManager: {fileID: 0}
   isNegative: 0
-  isPast: 0
   isPolite: 1
   inflection: 1
 --- !u!1 &7575671486880802632
@@ -1682,6 +1684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: 1d95418ce7929b141bdc54001f95096a, type: 2}
+  wordPanelManager: {fileID: 0}
 --- !u!1 &8906417867075482866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,7 +1698,7 @@ GameObject:
   - component: {fileID: 6425542817693148146}
   m_Layer: 0
   m_Name: PartsOfSpeech3
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1730,7 +1733,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d771bb9e1929bb4468a1364c56f49732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  words: []
 --- !u!114 &6425542817693148146
 MonoBehaviour:
   m_ObjectHideFlags: 0
