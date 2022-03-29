@@ -20,6 +20,8 @@ public partial class GameManager : MonoBehaviour
     public GameObject enemyHealthBar;
     public BarScript enemyHpScript;
 
+
+    public GameObject attackSpawnPoint;
     public string weakPoint = ""; //For POSAttacks
 
     void Awake()
@@ -49,6 +51,16 @@ public partial class GameManager : MonoBehaviour
     public void playerTakeDamage()
     {
         hpScript.updateBar(-1);
+    }
+
+    public void playerUpdateMana(int manaToAdd)
+    {
+        manaScript.updateBar(manaToAdd);
+    }
+
+    public void enemyTakeDamage(int damageToDeal)
+    {
+        enemyHpScript.updateBar(-damageToDeal);
     }
 
     public void ChangeScreen(string screenName)

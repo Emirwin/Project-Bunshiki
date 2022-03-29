@@ -34,6 +34,11 @@ public class Enemy : MonoBehaviour
         //hitPoints--;
     }
 
+    void ChangeAggression(int aggressionAmount)
+    {
+        enemyAggression-=aggressionAmount;
+    }
+
     public virtual void doAttack()
     {
         Instantiate(enemyAttacks[currentAttack%enemyAttacks.Length]);

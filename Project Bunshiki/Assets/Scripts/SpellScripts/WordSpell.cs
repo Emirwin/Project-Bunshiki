@@ -7,18 +7,15 @@ public class WordSpell : MonoBehaviour //used by Nouns
 {
     public WordSO word;
     protected TextMeshPro wordMesh; 
+    public WordPanelManager wordPanelManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        wordPanelManager = GameObject.Find("WordPanel").GetComponent<WordPanelManager>();
+
         wordMesh = gameObject.GetComponent<TextMeshPro>();
         SetWordSpell();
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
     }
 
@@ -33,5 +30,18 @@ public class WordSpell : MonoBehaviour //used by Nouns
     void OnMouseDown()
     {
         Debug.Log($"Meaning: {word.MEANINGS[0]}");
+        //Display in UI
+
+        
+        DisplayWordInfo();
+    }
+
+    void DisplayWordInfo()
+    {
+        //Selection glow?
+        wordPanelManager.ChangeText(wordPanelManager.baseWordInfo, $"{word.ROMAJI}");
+        wordPanelManager.ChangeText(wordPanelManager.meaningInfo, $"{word.MEANINGS[0]}");
+        wordPanelManager.ChangeText(wordPanelManager.partOfSpeechInfo, $"{word.PARTOFSPEECH[0]}");
+        //if verb, also add which conjugation form it is
     }
 }
