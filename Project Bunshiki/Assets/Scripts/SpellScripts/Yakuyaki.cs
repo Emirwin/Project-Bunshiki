@@ -17,7 +17,7 @@ public class Yakuyaki : Spell
         if(noActiveProblem && !lastProblem) 
         {
             int randomChoice = Random.Range(0,problems.Count);
-            SpawnSentence(problems[randomChoice]);
+            SpawnProblem(problems[randomChoice]);
             problems.RemoveAt(randomChoice);
             if(problems.Count == 0)
             {
@@ -34,7 +34,7 @@ public class Yakuyaki : Spell
     {
         base.StartRitual();
         int randomChoice = Random.Range(0,problems.Count);
-        SpawnSentence(problems[randomChoice]); //Spawn first problem
+        SpawnProblem(problems[randomChoice]); //Spawn first problem
         problems.RemoveAt(randomChoice);
         if(problems.Count == 0)
         {
@@ -42,7 +42,7 @@ public class Yakuyaki : Spell
         }
     }
     
-    public void SpawnSentence(GameObject problem)
+    public void SpawnProblem(GameObject problem)
     {
         Debug.Log($"Spawning {problem}");
         Instantiate(problem, problem.transform.position, Quaternion.identity, gameObject.transform);
