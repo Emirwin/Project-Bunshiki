@@ -36,10 +36,10 @@ public class WordSpell : MonoBehaviour //used by Nouns
         DisplayWordInfo();
     }
 
-    void DisplayWordInfo()
+    void DisplayWordInfo()  //Tell WordPanelManager to show in the word panel
     {
         //Selection glow?
-        wordPanelManager.ChangeText(wordPanelManager.baseWordInfo, $"{word.ROMAJI}");
+        wordPanelManager.ChangeText(wordPanelManager.baseWordInfo, $"{word.ROMAJI} - {word.KANJI} ({word.FURIGANA})");
         wordPanelManager.ChangeText(wordPanelManager.meaningInfo, $"{word.MEANINGS[0]}");
         wordPanelManager.ChangeText(wordPanelManager.partOfSpeechInfo, $"{word.PARTOFSPEECH[0]}");
         //if verb, also add which conjugation form it is

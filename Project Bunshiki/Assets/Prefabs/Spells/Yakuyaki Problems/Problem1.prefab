@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: 6cc7cc859a708b4409e20e3525e1c6bc, type: 2}
+  wordPanelManager: {fileID: 0}
 --- !u!61 &4906744677567911927
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -530,7 +531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4906744678293768029}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.06459999, y: -2.05, z: 0}
+  m_LocalPosition: {x: 0.06459999, y: -1, z: 0}
   m_LocalScale: {x: 8.018938, y: 3.1961443, z: 1}
   m_Children:
   - {fileID: 4906744677495256615}
@@ -775,6 +776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: b7797bcf4fb9edd47b263934364c9492, type: 2}
+  wordPanelManager: {fileID: 0}
 --- !u!61 &4906744678298776015
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1646,6 +1648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: 76953aad7719dad49ba36e2d131b7fc9, type: 2}
+  wordPanelManager: {fileID: 0}
 --- !u!61 &4906744679261414537
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1981,6 +1984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: 67fdad3a425c21a4a957352e436897ea, type: 2}
+  wordPanelManager: {fileID: 0}
 --- !u!61 &4906744679541444490
 BoxCollider2D:
   m_ObjectHideFlags: 0
