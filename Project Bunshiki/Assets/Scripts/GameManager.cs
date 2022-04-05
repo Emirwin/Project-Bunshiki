@@ -141,7 +141,7 @@ public partial class GameManager : MonoBehaviour
 
         for(int i = 0; i < sceneEnemyAttacks.Length; i++)
         {
-            sceneEnemyAttacks[i].GetComponent<MoveDown>().modifier*=multiplier;
+            sceneEnemyAttacks[i].GetComponent<MoveScript>().modifier*=multiplier;
         }
     }
 
@@ -152,7 +152,7 @@ public partial class GameManager : MonoBehaviour
 
         for(int i = 0; i < scenePlayerBullets.Length; i++)
         {
-            scenePlayerBullets[i].GetComponent<MoveUp>().modifier*=multiplier;
+            scenePlayerBullets[i].GetComponent<MoveScript>().modifier*=multiplier;
         }
     }
 }

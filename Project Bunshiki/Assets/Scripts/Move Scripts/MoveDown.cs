@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveDown : MonoBehaviour
+public class MoveDown : MoveScript
 {
-    public float speed = 0.5f;
-    public float modifier = 1f;
-    void Update()
+    void Start()
     {
-        transform.Translate(Vector2.down * Time.deltaTime * speed * modifier);
+        direction = Vector2.down;
+    }
+    public override void Update()
+    {
+        base.Update();
     }
 }

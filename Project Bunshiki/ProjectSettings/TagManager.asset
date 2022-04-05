@@ -10,6 +10,7 @@ TagManager:
   - ActiveSpell
   - ActiveProblem
   - EnemyAttack
+  - Reflector
   layers:
   - Default
   - TransparentFX

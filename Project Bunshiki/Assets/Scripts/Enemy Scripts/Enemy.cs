@@ -5,23 +5,32 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int hitPoints;
-    private int maxHitPoints;
+    private int maxHitPoints;   //original hit points
     
-    public float enemySpeed;
-    
-    public float enemyCurrentAggression = 10.0f; //lower is more aggressive
-    private float enemyMaxAgression;
+    public float enemyCurrentAggression = 10.0f; //lower is more aggressive (controls rate of attack)
+    [SerializeField]
+    private float enemyMaxAgression;    //original aggression
 
     public Attack[] enemyAttacks;
     public int currentAttack = 0;
+    public int attackCount = 3; //Number of attacks to do before switching to next attack
+    [SerializeField]
+    private int attackCounter = 0; 
+    [SerializeField]
+    private int attackCountOriginal;
     public float attackSpeedModifier = 1.0f;
+
+    public bool isLastAttack = false;
 
     
     //public
     void Awake()
     {
+        //Save values
         maxHitPoints = hitPoints;
         enemyMaxAgression = enemyCurrentAggression;
+        attackCountOriginal = attackCount;
+
     }
     // Start is called before the first frame update
     void Start()
@@ -49,22 +58,73 @@ public class Enemy : MonoBehaviour
         //hitPoints--;
     }
 
-    void ChangeAggression(int multiplier)
+    public void ChangeAggression(float multiplier)
     {
         enemyCurrentAggression*=multiplier;
+
+        if(multiplier<=1.0f) {  //For animation
+            Debug.Log($"{gameObject.name} got angrier! Aggresion: {enemyCurrentAggression}");
+        }
+        else {
+            Debug.Log($"{gameObject.name} got calmer! Aggresion: {enemyCurrentAggression}");
+        }
+
+        CancelInvoke();
+        InvokeRepeating("doAttack", 2.0f, enemyCurrentAggression);
+    }
+
+    public void ResetAggression()
+    {
+        Debug.Log("Enemy Aggression has been reset");
+        enemyCurrentAggression = enemyMaxAgression;
+
+        CancelInvoke();
+        InvokeRepeating("doAttack", 3.0f, enemyCurrentAggression);
     }
 
     public virtual void doAttack()
     {
+        attackCounter++;
+        if(IsFirstAttack())
+        {
+            isLastAttack = false;
+        }
+
         Attack temp;
         temp = Instantiate(enemyAttacks[currentAttack%enemyAttacks.Length]);
         temp.attackSpeedModifier *= attackSpeedModifier;
 
-        if(hitPoints == maxHitPoints*0.6) //Think about the role of agression and etc
+        if(attackCounter == attackCount && enemyAttacks.Length > 1)
         {
-            currentAttack++;
+            isLastAttack = true;
+
+            switchAttack();
+            attackCounter = 0;
         }
         
+        
+    }
+
+    public void changeCount(int newCount)
+    {
+        attackCount = newCount;
+    }
+
+    public void ResetCount()
+    {
+        changeCount(attackCountOriginal);
+    }
+    
+    public bool IsFirstAttack()
+    {
+        return (attackCounter == 1);
+    }
+
+    void switchAttack()
+    {
+        Debug.Log("SWITCHING ATTACK!");
+        currentAttack++;
+
     }
 
 }

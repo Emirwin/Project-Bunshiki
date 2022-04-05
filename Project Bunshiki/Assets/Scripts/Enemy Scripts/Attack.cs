@@ -8,29 +8,40 @@ public abstract class Attack : MonoBehaviour
     public List<Sentence> sentenceAmmo;
     //public int currentSentence = 0;
     public Sentence newestSentence;
-    public GameObject gameManager;
+    public GameManager gameManager;
+
+    protected Vector3 attackSpawnPos;
+    protected Vector3 spawnPos;
+
 
     //public bool attacksSlowed = false;
-    public float attackSpeedModifier = 1.0f;
+    public float attackSpeedModifier = 1.0f;    //modifier for the changing of screens
     void Awake()
     {
-        gameManager = GameObject.Find("GameManager");
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        attackSpawnPos = gameManager.attackSpawnPoint.transform.position;
+        spawnPos = new Vector3(attackSpawnPos.x + 1.57f,attackSpawnPos.y,0);
     }
     public virtual void Start()
     {
-        int randomChoice = Random.Range(0,sentenceAmmo.Count);
+        int choiceIndex = 0;
+        
+        choiceIndex = Random.Range(0,sentenceAmmo.Count);
+        
+        
+        
+        newestSentence = SpawnSentence(sentenceAmmo[choiceIndex]);
+        newestSentence.GetComponent<MoveScript>().modifier *= attackSpeedModifier;
 
-
-        newestSentence = SpawnSentence(sentenceAmmo[randomChoice]);
-        newestSentence.GetComponent<MoveDown>().modifier *= attackSpeedModifier;
+        Destroy(gameObject);
+        
     }
 
     public Sentence SpawnSentence(Sentence sentenceToSpawn)
     {
         Debug.Log($"Attacking! With {gameObject.name}");
-        //new Vector3(1.56f,3f,0)
-        Vector3 AttackSpawnPos = gameManager.GetComponent<GameManager>().attackSpawnPoint.transform.position;
-        Vector3 spawnPos = new Vector3(AttackSpawnPos.x + 1.57f,AttackSpawnPos.y,0);
+
+        
 
         Sentence temp;
 
