@@ -1,15 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 //Word objects for the sight specifically
 public class WordAttack : MonoBehaviour
 {
     public int hitPoints = 6;
     public GameObject gameManager;
+    public TextMeshPro textRenderer;
+    public Color32 damageColor = new Color32(255,175,175,255);
+
+    private IEnumerator coroutine;
     void Start()
     {
         gameManager = GameObject.Find("GameManager");
+        textRenderer = gameObject.GetComponent<TextMeshPro>();
     }
     void Update()
     {
@@ -33,6 +39,10 @@ public class WordAttack : MonoBehaviour
         {
             Debug.Log($"{gameObject.name} collided with {other.name}! Dealing {other.GetComponentInParent<Bullet>().bulletPower} damage!");
             hitPoints -= other.GetComponentInParent<Bullet>().bulletPower;
+
+            //damage animation
+            coroutine = FlashColor(damageColor);
+            StartCoroutine(coroutine);
             
             if(string.Equals(gameObject.name,gameManager.GetComponent<GameManager>().weakPoint))
             {
@@ -42,4 +52,15 @@ public class WordAttack : MonoBehaviour
             }
         }
     }
+
+    IEnumerator FlashColor(Color32 newColor)
+    {
+        Color32 temp = textRenderer.color;
+        textRenderer.color = newColor;
+        //wait for seconds
+        yield return new WaitForSeconds(0.1f);
+
+        textRenderer.color = temp;
+    }
+
 }

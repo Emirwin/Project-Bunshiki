@@ -6823,12 +6823,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitPoints: 20
   enemyCurrentAggression: 10
+  enemyMaxAgression: 0
   enemyAttacks:
   - {fileID: -4981594564089931419, guid: 65a7aec4bf0009045a2ee9bfc7f6e93b, type: 3}
   - {fileID: -4405729465806972870, guid: 22bf518356c146947a095776b79fa7a5, type: 3}
   currentAttack: 0
   attackCount: 2
+  attackCounter: 0
+  attackCountOriginal: 0
   attackSpeedModifier: 1
+  isLastAttack: 0
 --- !u!50 &2133296956
 Rigidbody2D:
   serializedVersion: 4
