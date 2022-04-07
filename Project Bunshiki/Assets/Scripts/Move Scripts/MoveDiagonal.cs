@@ -5,8 +5,9 @@ using UnityEngine;
 public class MoveDiagonal : MoveScript
 {
     // Start is called before the first frame update
-     void Start()
+    public override void Start()
     {
+        base.Start();
         direction = new Vector2(Random.Range(-1,1),-1f);
         
     }

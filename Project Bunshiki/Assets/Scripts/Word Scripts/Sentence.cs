@@ -11,7 +11,7 @@ public class Sentence : MonoBehaviour
     {
         if(transform.childCount == 0)
         {
-            Destroy(gameObject, 1.0f);
+            Destroy(gameObject);
         }
     }
 }

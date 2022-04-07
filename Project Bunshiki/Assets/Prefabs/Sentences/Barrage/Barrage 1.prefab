@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4203630930023900861}
   - component: {fileID: 8499591332258059283}
   - component: {fileID: 7909278884388511209}
+  - component: {fileID: 9087174325355400467}
   m_Layer: 0
   m_Name: adj
   m_TagString: EnemyBullet
@@ -214,6 +215,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitPoints: 6
   gameManager: {fileID: 0}
+  textRenderer: {fileID: 0}
+  damageColor:
+    serializedVersion: 2
+    rgba: 4289703935
 --- !u!114 &7909278884388511209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +235,27 @@ MonoBehaviour:
   wordPanelManager: {fileID: 0}
   isNegative: 0
   isPast: 0
+--- !u!50 &9087174325355400467
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2487426471368964573}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3697904832271452463
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +438,7 @@ GameObject:
   - component: {fileID: 8906417867075482876}
   - component: {fileID: 5167904137384614863}
   - component: {fileID: 4087950162823516366}
+  - component: {fileID: 3930983056867434453}
   m_Layer: 0
   m_Name: Barrage 1
   m_TagString: EnemyAttack
@@ -471,14 +498,40 @@ Rigidbody2D:
   m_GameObject: {fileID: 8906417867075482866}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &3930983056867434453
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8906417867075482866}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4160719, y: 0.4729762}
+  m_EdgeRadius: 0

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4203630930023900861}
   - component: {fileID: 8499591332258059283}
   - component: {fileID: 2330658679513714046}
+  - component: {fileID: 4964878670848818380}
   m_Layer: 0
   m_Name: noun
   m_TagString: EnemyBullet
@@ -187,7 +188,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.17543077, y: -0.77726436}
+  m_Offset: {x: -0.1673125, y: -0.43452287}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -198,7 +199,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.58986, y: 2.9195395}
+  m_Size: {x: 7.904373, y: 3.6050224}
   m_EdgeRadius: 0
 --- !u!114 &8499591332258059283
 MonoBehaviour:
@@ -214,6 +215,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitPoints: 6
   gameManager: {fileID: 0}
+  textRenderer: {fileID: 0}
+  damageColor:
+    serializedVersion: 2
+    rgba: 4289703935
 --- !u!114 &2330658679513714046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,6 +233,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   word: {fileID: 11400000, guid: 66d8a80a25ebf0c4b97565ebeafe1004, type: 2}
   wordPanelManager: {fileID: 0}
+--- !u!50 &4964878670848818380
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2487426471368964573}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3697904832271452463
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,6 +436,7 @@ GameObject:
   - component: {fileID: 8906417867075482876}
   - component: {fileID: 2839393373193424386}
   - component: {fileID: 6690022784375201475}
+  - component: {fileID: 5147958207578714629}
   m_Layer: 0
   m_Name: Barrage 2
   m_TagString: EnemyAttack
@@ -469,14 +496,40 @@ Rigidbody2D:
   m_GameObject: {fileID: 8906417867075482866}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!61 &5147958207578714629
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8906417867075482866}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.013869107, y: -0.013869047}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.3605953, y: 0.5284524}
+  m_EdgeRadius: 0

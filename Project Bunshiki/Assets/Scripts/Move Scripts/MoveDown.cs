@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class MoveDown : MoveScript
 {
-    void Start()
+    public override void Start()
     {
+        base.Start();
         direction = Vector2.down;
     }
     public override void Update()

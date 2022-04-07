@@ -2217,9 +2217,9 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676861246}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -2228,7 +2228,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!61 &676861248
 BoxCollider2D:
@@ -4214,9 +4214,9 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173471983}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -4225,7 +4225,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!61 &1173471985
 BoxCollider2D:
@@ -6825,7 +6825,6 @@ MonoBehaviour:
   enemyCurrentAggression: 10
   enemyMaxAgression: 0
   enemyAttacks:
-  - {fileID: -4981594564089931419, guid: 65a7aec4bf0009045a2ee9bfc7f6e93b, type: 3}
   - {fileID: -4405729465806972870, guid: 22bf518356c146947a095776b79fa7a5, type: 3}
   currentAttack: 0
   attackCount: 2
