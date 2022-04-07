@@ -24,15 +24,15 @@ public abstract class MoveScript : MonoBehaviour
     }
 
 
-    void OnTriggerEnter2D(Collider2D other) //THIS CAN BE REMOVED but i dont see it causing anyproblems
-    {
-        Debug.Log($"{gameObject.name} collided with {other.name}!");
-        if(!other.CompareTag("Bullet"))
-        {
-            Reflect();
-        }
+    // void OnTriggerEnter2D(Collider2D other) 
+    // {
+    //     Debug.Log($"{gameObject.name} collided with {other.name}!");
+    //     if(!other.CompareTag("Bullet"))
+    //     {
+    //         Reflect();
+    //     }
         
-    }
+    // }
 
     void OnCollisionEnter2D(Collision2D col)
     {
