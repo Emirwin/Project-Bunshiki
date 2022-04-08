@@ -12,10 +12,20 @@ public class WordSpell : MonoBehaviour //used by Nouns
     // Start is called before the first frame update
     void Start()
     {
+        
         wordPanelManager = GameObject.Find("WordPanel").GetComponent<WordPanelManager>();
 
         wordMesh = gameObject.GetComponent<TextMeshPro>();
-        SetWordSpell();
+
+        if(word != null)
+        {
+            SetWordSpell();
+        }
+        else
+        {
+            Debug.LogWarning($"{gameObject.name} has no Scriptable Object Word attached.");
+        }
+        
         
     }
 

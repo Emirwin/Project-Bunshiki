@@ -34,8 +34,17 @@ public partial class GameManager : MonoBehaviour
         manaScript = manaBar.GetComponent<BarScript>();
         playerScript = playerObject.GetComponent<Player>();
 
-        enemyHpScript = enemyHealthBar.GetComponent<BarScript>();
-        enemyScript = enemyObject.GetComponent<Enemy>();
+        if(enemyObject != null)
+        {
+            
+            enemyHpScript = enemyHealthBar.GetComponent<BarScript>();
+            enemyScript = enemyObject.GetComponent<Enemy>();
+        }
+        else
+        {
+            Debug.LogWarning("No enemy in scene.");
+        }
+        
     }
     // Start is called before the first frame update
     void Start()
@@ -43,7 +52,11 @@ public partial class GameManager : MonoBehaviour
         hpScript.InitializeBar(playerScript.playerHitPoints);
         manaScript.InitializeBar(playerScript.playerManaPoints);
 
-        enemyHpScript.InitializeBar(enemyScript.hitPoints);
+        if(enemyObject!=null)
+        {
+            enemyHpScript.InitializeBar(enemyScript.hitPoints);
+        }
+        
     }
 
     // Update is called once per frame

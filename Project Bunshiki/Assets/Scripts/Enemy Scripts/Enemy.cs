@@ -26,6 +26,11 @@ public class Enemy : MonoBehaviour
     //public
     void Awake()
     {
+        if(attackCount == 1)
+        {
+            Debug.LogWarning("Attack Count was set to 1. It must be at least 2.");
+        }
+        
         //Save values
         maxHitPoints = hitPoints;
         enemyMaxAgression = enemyCurrentAggression;
@@ -94,7 +99,7 @@ public class Enemy : MonoBehaviour
         temp = Instantiate(enemyAttacks[currentAttack%enemyAttacks.Length]);
         temp.attackSpeedModifier *= attackSpeedModifier;
 
-        if(attackCounter == attackCount && enemyAttacks.Length > 1)
+        if(attackCounter == attackCount && enemyAttacks.Length > 1 || temp.numberToSpawn == 1)
         {
             isLastAttack = true;
 
@@ -105,14 +110,16 @@ public class Enemy : MonoBehaviour
         
     }
 
-    public void changeCount(int newCount)
+    public void ChangeCount(int newCount)
     {
+        Debug.Log($"Enemy {gameObject.name}: attack count changed to {newCount}");
         attackCount = newCount;
     }
 
     public void ResetCount()
     {
-        changeCount(attackCountOriginal);
+        Debug.Log($"Enemy {gameObject.name}: attack count reset");
+        ChangeCount(attackCountOriginal);
     }
     
     public bool IsFirstAttack()
@@ -120,9 +127,10 @@ public class Enemy : MonoBehaviour
         return (attackCounter == 1);
     }
 
-    void switchAttack()
+    public void switchAttack()
     {
         Debug.Log("SWITCHING ATTACK!");
+
         currentAttack++;
 
     }

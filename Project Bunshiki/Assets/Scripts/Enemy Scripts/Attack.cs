@@ -12,15 +12,19 @@ public abstract class Attack : MonoBehaviour
 
     protected Vector3 attackSpawnPos;
     protected Vector3 spawnPos;
+    public float spawnPosXOffset = 1.57f;
+
+    public int numberToSpawn;
+    public float aggressionMod; 
 
 
     //public bool attacksSlowed = false;
     public float attackSpeedModifier = 1.0f;    //modifier for the changing of screens
     void Awake()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         attackSpawnPos = gameManager.attackSpawnPoint.transform.position;
-        spawnPos = new Vector3(attackSpawnPos.x + 1.57f,attackSpawnPos.y,0);
+        spawnPos = new Vector3(attackSpawnPos.x + spawnPosXOffset,attackSpawnPos.y,0);
     }
     public virtual void Start()
     {
@@ -28,6 +32,10 @@ public abstract class Attack : MonoBehaviour
         
         choiceIndex = Random.Range(0,sentenceAmmo.Count);
         
+        if(numberToSpawn != 1)
+        {
+            ManageEnemyValues(aggressionMod, numberToSpawn);  
+        }  
         
         
         newestSentence = SpawnSentence(sentenceAmmo[choiceIndex]);
@@ -51,5 +59,20 @@ public abstract class Attack : MonoBehaviour
         return temp;
         //Destroy(gameObject);
     }
-
+    
+    public void ManageEnemyValues(float aggressionModifier, int numberOfAttacksToSpawn)
+    {
+        if(gameManager.enemyScript.IsFirstAttack())
+        {
+            Debug.Log("First Attack");
+            gameManager.enemyScript.ChangeAggression(aggressionModifier);
+            gameManager.enemyScript.ChangeCount(numberOfAttacksToSpawn);
+        }
+        if(gameManager.enemyScript.isLastAttack)
+        {
+            Debug.Log("Last Attack");
+            gameManager.enemyScript.ResetAggression();
+            gameManager.enemyScript.ResetCount();
+        }
+    }
 }

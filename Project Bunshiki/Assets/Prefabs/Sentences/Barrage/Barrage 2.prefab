@@ -214,6 +214,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 6
+  isIndestructible: 0
+  isPassable: 0
   gameManager: {fileID: 0}
   textRenderer: {fileID: 0}
   damageColor:
@@ -506,7 +508,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &5147958207578714629
 BoxCollider2D:
   m_ObjectHideFlags: 0

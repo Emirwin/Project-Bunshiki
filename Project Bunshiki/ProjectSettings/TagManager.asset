@@ -11,6 +11,7 @@ TagManager:
   - ActiveProblem
   - EnemyAttack
   - Reflector
+  - GameManager
   layers:
   - Default
   - TransparentFX

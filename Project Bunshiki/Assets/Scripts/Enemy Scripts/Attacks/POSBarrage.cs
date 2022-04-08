@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class POSBarrage : Attack
 {
-    public int numberToSpawn = 3;
-    public float aggressionMod = 0.3f; 
     // Start is called before the first frame update
     public override void Start()
     {
@@ -13,19 +11,11 @@ public class POSBarrage : Attack
         float randomPosY;
         int choiceIndex;
         
-        if(gameManager.enemyScript.IsFirstAttack())
+        if(numberToSpawn != 1)
         {
-            Debug.Log("First Attack");
-            gameManager.enemyScript.ChangeAggression(aggressionMod);
-            gameManager.enemyScript.changeCount(numberToSpawn);
-        }
-        if(gameManager.enemyScript.isLastAttack)
-        {
-            Debug.Log("Last Attack");
-            gameManager.enemyScript.ResetAggression();
-            gameManager.enemyScript.ResetCount();
-        }
-        
+            ManageEnemyValues(aggressionMod, numberToSpawn);  
+        }  
+           
         
         randomPosX = Random.Range(-1.5f,1.5f);
         randomPosY = Random.Range(0, 1.0f);

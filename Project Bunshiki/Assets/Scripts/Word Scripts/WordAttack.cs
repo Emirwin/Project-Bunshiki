@@ -7,6 +7,7 @@ using TMPro;
 public class WordAttack : MonoBehaviour
 {
     public int hitPoints = 6;
+    public bool isIndestructible = false;
     public GameObject gameManager;
     public TextMeshPro textRenderer;
     public Color32 damageColor = new Color32(255,175,175,255);
@@ -35,7 +36,7 @@ public class WordAttack : MonoBehaviour
             Debug.Log($"{gameObject.name} collided with {other.name}!");
             Destroy(gameObject);
         }
-        else if(other.CompareTag("Bullet"))
+        else if(other.CompareTag("Bullet") && !isIndestructible)
         {
             Debug.Log($"{gameObject.name} collided with {other.name}! Dealing {other.GetComponentInParent<Bullet>().bulletPower} damage!");
             hitPoints -= other.GetComponentInParent<Bullet>().bulletPower;
@@ -50,6 +51,11 @@ public class WordAttack : MonoBehaviour
                 hitPoints -= 2;
                 //Particle Effect
             }
+        }
+        else if(other.CompareTag("Bullet") && isIndestructible)
+        {
+            coroutine = FlashColor(new Color32(255,255,255,176));
+            StartCoroutine(coroutine);
         }
     }
 

@@ -69,9 +69,9 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2182843623890709715}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -97,6 +97,7 @@ MonoBehaviour:
   playerSpeed: 5
   playerHitPoints: 12
   playerManaPoints: 6
+  isInvulnerable: 0
   playerBullet: {fileID: 5822185504028213785, guid: 7fa94f63e9e8a1b4191d1980b77440c4, type: 3}
   bulletsSlowed: 0
   bulletSpeedModifier: 1

@@ -13,7 +13,7 @@ public abstract class MoveScript : MonoBehaviour
     {
         if(gameObject.GetComponent<Collider2D>() == null)
         {
-            Debug.LogError($"The sentence {gameObject.name} has no collider attached.");
+            Debug.LogWarning($"The sentence {gameObject.name} has no collider attached.");
         }
     }
 
