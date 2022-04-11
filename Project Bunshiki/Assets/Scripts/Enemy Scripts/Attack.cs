@@ -20,14 +20,22 @@ public abstract class Attack : MonoBehaviour
 
     //public bool attacksSlowed = false;
     public float attackSpeedModifier = 1.0f;    //modifier for the changing of screens
-    void Awake()
+    public virtual void Awake()
     {
+        if(sentenceAmmo.Count == 0)
+        {
+            Debug.LogError($"{gameObject.name} has no sentences!");
+        }
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         attackSpawnPos = gameManager.attackSpawnPoint.transform.position;
         spawnPos = new Vector3(attackSpawnPos.x + spawnPosXOffset,attackSpawnPos.y,0);
     }
     public virtual void Start()
     {
+        if(numberToSpawn == 0)
+        {
+            Debug.LogError($"{gameObject.name}: Number to spawn must be atleast 1");
+        }
         int choiceIndex = 0;
         
         choiceIndex = Random.Range(0,sentenceAmmo.Count);
@@ -41,8 +49,7 @@ public abstract class Attack : MonoBehaviour
         newestSentence = SpawnSentence(sentenceAmmo[choiceIndex]);
         newestSentence.GetComponent<MoveScript>().modifier *= attackSpeedModifier;
 
-        Destroy(gameObject);
-        
+        Destroy(gameObject);  
     }
 
     public Sentence SpawnSentence(Sentence sentenceToSpawn)

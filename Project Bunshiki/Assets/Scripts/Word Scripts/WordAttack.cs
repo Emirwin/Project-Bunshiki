@@ -7,6 +7,7 @@ using TMPro;
 public class WordAttack : MonoBehaviour
 {
     public int hitPoints = 6;
+    public int manaValue = 2;
     public bool isIndestructible = false;
     public GameObject gameManager;
     public TextMeshPro textRenderer;
@@ -23,7 +24,7 @@ public class WordAttack : MonoBehaviour
         if(hitPoints==0)
         {
             //Once destroyed add to mana
-            gameManager.GetComponent<GameManager>().playerUpdateMana(2);
+            gameManager.GetComponent<GameManager>().playerUpdateMana(manaValue);
             Destroy(gameObject);
             
         }

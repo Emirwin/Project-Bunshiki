@@ -10,6 +10,15 @@ public abstract class AttackSingle : Attack
         {
             Debug.LogWarning($"Attack {gameObject.name} should only have one ammo!");
         }
-        base.Start();
+        if(numberToSpawn != 1)
+        {
+            Debug.LogError($"{gameObject.name}: Number to spawn must be 1");
+        }
+
+        newestSentence = SpawnSentence(sentenceAmmo[0]);
+        newestSentence.GetComponent<MoveScript>().modifier *= attackSpeedModifier;
+
+        Destroy(gameObject);  
+
     }
 }

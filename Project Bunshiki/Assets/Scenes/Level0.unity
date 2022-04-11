@@ -428,7 +428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5018933547384908635, guid: 686532e93d783444da7909b9fe22cd64, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5018933547384908635, guid: 686532e93d783444da7909b9fe22cd64, type: 3}
       propertyPath: attackCount
@@ -436,7 +436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5018933547384908635, guid: 686532e93d783444da7909b9fe22cd64, type: 3}
       propertyPath: enemyAttacks.Array.size
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5018933547384908635, guid: 686532e93d783444da7909b9fe22cd64, type: 3}
       propertyPath: enemyAttacks.Array.data[0]
@@ -465,15 +465,15 @@ PrefabInstance:
     - target: {fileID: 5018933547384908635, guid: 686532e93d783444da7909b9fe22cd64, type: 3}
       propertyPath: enemyAttacks.Array.data[6]
       value: 
-      objectReference: {fileID: 507709331022351126, guid: 39285d299ec543344ae587dbc3c25cb1, type: 3}
+      objectReference: {fileID: 3409176891019177522, guid: 575368ee022b4c84f9a4bba0be2dd5bb, type: 3}
     - target: {fileID: 5018933547384908635, guid: 686532e93d783444da7909b9fe22cd64, type: 3}
       propertyPath: enemyAttacks.Array.data[7]
       value: 
-      objectReference: {fileID: 507709331022351126, guid: 39285d299ec543344ae587dbc3c25cb1, type: 3}
+      objectReference: {fileID: 2103583371771110895, guid: f9803154c86c03a4b9dfad9a5ceba2aa, type: 3}
     - target: {fileID: 5018933547384908635, guid: 686532e93d783444da7909b9fe22cd64, type: 3}
       propertyPath: enemyAttacks.Array.data[8]
       value: 
-      objectReference: {fileID: 507709331022351126, guid: 39285d299ec543344ae587dbc3c25cb1, type: 3}
+      objectReference: {fileID: 2103583371771110895, guid: f9803154c86c03a4b9dfad9a5ceba2aa, type: 3}
     - target: {fileID: 5018933547384908635, guid: 686532e93d783444da7909b9fe22cd64, type: 3}
       propertyPath: enemyAttacks.Array.data[9]
       value: 

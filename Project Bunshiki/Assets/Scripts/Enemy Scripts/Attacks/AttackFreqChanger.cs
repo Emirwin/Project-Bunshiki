@@ -15,6 +15,11 @@ public class AttackFreqChanger : Attack
     }
 
     public fixedTimes aggressionModifier;
+
+    public override void Awake()
+    {
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+    }
     
     public override void Start()
     {
