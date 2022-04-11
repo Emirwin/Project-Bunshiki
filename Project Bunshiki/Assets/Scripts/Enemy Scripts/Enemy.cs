@@ -9,11 +9,14 @@ public class Enemy : MonoBehaviour
     
     public float enemyCurrentAggression = 10.0f; //lower is more aggressive (controls rate of attack)
     [SerializeField]
-    private float enemyMaxAgression;    //original aggression
+    private float enemyMaxAgression;  
+    public float EnemyMaxAggression {
+        get { return enemyMaxAgression; }
+    }  //original aggression
 
     public Attack[] enemyAttacks;
     public int currentAttack = 0;
-    public int attackCount = 3; //Number of attacks to do before switching to next attack
+    public int attackCount = 2; //Number of attacks to do before switching to next attack
     [SerializeField]
     private int attackCounter = 0; 
     [SerializeField]
@@ -28,7 +31,15 @@ public class Enemy : MonoBehaviour
     {
         if(attackCount == 1)
         {
-            Debug.LogWarning("Attack Count was set to 1. It must be at least 2.");
+            Debug.LogWarning("Attack Count was set to 1. It must be at least 2. If you want a single sentence from an attack, make the attack Inherit from AttackSingle (All attacks will be spawned at least twice otherwise).");
+        }
+        if(attackCount <= 2)
+        {
+            Debug.Log($"First: Attack Count was set to {attackCount}");
+        }
+        else
+        {
+            Debug.LogError($"Invalid attackCount: {attackCount}");
         }
         
         //Save values
@@ -73,6 +84,15 @@ public class Enemy : MonoBehaviour
         else {
             Debug.Log($"{gameObject.name} got calmer! Aggresion: {enemyCurrentAggression}");
         }
+
+        CancelInvoke();
+        InvokeRepeating("doAttack", 2.0f, enemyCurrentAggression);
+    }
+
+    public void ReplaceAggression(float newAggression)
+    {
+        enemyCurrentAggression = newAggression;
+        Debug.Log($"{gameObject.name}: New aggression ({newAggression})");
 
         CancelInvoke();
         InvokeRepeating("doAttack", 2.0f, enemyCurrentAggression);

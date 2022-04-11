@@ -20,6 +20,10 @@ public class YakuyakiChoices : MonoBehaviour
             yakuyaki.noActiveProblem = true;
             Destroy(yakuyaki.activeProblem);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
         
     }
 }
