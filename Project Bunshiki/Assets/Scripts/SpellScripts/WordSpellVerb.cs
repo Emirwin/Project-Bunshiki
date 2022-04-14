@@ -58,9 +58,6 @@ public class WordSpellVerb : WordSpell
         {
             wordMesh.text = temp;
         }
-
-
-        
     }
 
     private string InflectVerb(verbType type)
@@ -70,13 +67,32 @@ public class WordSpellVerb : WordSpell
         if(type == verbType.Ichidan) //TO DO: Other forms 
         {
             temp = temp.Substring(0,temp.Length-2);
+            
             if(inflection == Inflection.Past)
             {
-                temp += "ta";
+               if(isPolite) {
+                    if(isNegative) 
+                    { temp += "masendeshita"; } //SHIMEMASENDESHITA
+                    else { temp += "mashita"; } //SHIMEMASHITA
+                }
+                else {
+                    if(isNegative) 
+                    { temp += "nakatta"; } //SHIMENAKATTA
+                    else { temp += "ta"; } //SHIMETA
+                }
             }
             else if(inflection == Inflection.TeForm)
             {
-                temp += "te";
+                if(isPolite) {
+                    if(isNegative) 
+                    { temp += "N/A"; }
+                    else { temp += "mashite"; } //SHIMEMASHITE
+                }
+                else {
+                    if(isNegative) 
+                    { temp += "nakute"; } //SHIMENAKUTE
+                    else { temp += "te"; } //SHIMETE
+                }
             }
             else if(inflection == Inflection.Potential)
             {
@@ -97,6 +113,34 @@ public class WordSpellVerb : WordSpell
             else if(inflection == Inflection.Imperative)
             {
                 temp += "ro";
+            }
+            else if(inflection == Inflection.Conditional)
+            {
+                temp += "ro";
+            }
+            else if(inflection == Inflection.ProvisionalConditional)
+            {
+                
+            }
+            else if(inflection == Inflection.Progressive)
+            {
+                
+            }
+            else if(inflection == Inflection.PastProgressive)
+            {
+                
+            }
+            else if(inflection == Inflection.PastPresumptive)
+            {
+                
+            }
+            else if(inflection == Inflection.Presumptive)
+            {
+                
+            }
+            else //Infinitive
+            {
+                temp += "";
             }
         }
         else if(type == verbType.Godan) //GODAN VERBS
@@ -401,10 +445,10 @@ public class WordSpellVerb : WordSpell
                         if(string.Equals(godanKind, "u")){
                             temp += "w";
                         }
-                        temp += "anakereba";     //KAUNA
+                        temp += "anakereba";     //KAWANAKEREBA
                     }
                     else {
-                        temp += "eba";    //KAE
+                        temp += "eba";    //KAEBA
                     }
                 }
             }

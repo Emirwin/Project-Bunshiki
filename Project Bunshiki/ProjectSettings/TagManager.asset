@@ -12,6 +12,9 @@ TagManager:
   - EnemyAttack
   - Reflector
   - GameManager
+  - Mist
+  - Water
+  - Choice
   layers:
   - Default
   - TransparentFX

@@ -8,6 +8,7 @@ public class WordSpell : MonoBehaviour //used by Nouns
     public WordSO word;
     protected TextMeshPro wordMesh; 
     public WordPanelManager wordPanelManager;
+    public bool replaceWordMesh = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,9 @@ public class WordSpell : MonoBehaviour //used by Nouns
 
         if(word != null)
         {
-            SetWordSpell();
+            if(replaceWordMesh) {
+                SetWordSpell();
+            }
         }
         else
         {
@@ -51,7 +54,14 @@ public class WordSpell : MonoBehaviour //used by Nouns
         //Selection glow?
         wordPanelManager.ChangeText(wordPanelManager.baseWordInfo, $"{word.ROMAJI} - {word.KANJI} ({word.FURIGANA})");
         wordPanelManager.ChangeText(wordPanelManager.meaningInfo, $"{word.MEANINGS[0]}");
-        wordPanelManager.ChangeText(wordPanelManager.partOfSpeechInfo, $"{word.PARTOFSPEECH[0]}");
+        
+        string partsOfSpeech = "";
+        foreach (string str in word.PARTOFSPEECH)
+        {
+            partsOfSpeech += str+"\n";
+        }
+        
+        wordPanelManager.ChangeText(wordPanelManager.partOfSpeechInfo, $"{partsOfSpeech}");
         //if verb, also add which conjugation form it is
     }
 }

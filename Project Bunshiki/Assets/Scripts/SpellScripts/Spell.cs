@@ -16,7 +16,7 @@ public abstract class Spell : MonoBehaviour
     private int timeLeft;
 
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
         scoreUI = GameObject.Find("ScoreUI").GetComponent<TextMeshPro>();
         countdownUI = GameObject.Find("CountdownUI").GetComponent<TextMeshPro>();
