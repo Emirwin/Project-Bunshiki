@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8cb804cf1a4344288c98d14cd878c2, type: 3}
+  m_Name: Spells - Sakanobori
+  m_EditorClassIdentifier: 
+  lines:
+  - /emote:Bored/Sakanobori follows the journey of a carp that swims up the rapids.
+  - To gain favor, you must choose the path that makes a correct sentence. /emote:Normal/Remember
+    that the sentence is read up, left to right.
+  character:
+  - Kei
+  - Kei

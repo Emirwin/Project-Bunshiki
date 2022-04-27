@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
+    public GameObject ClearConfirmScreen;
     public void PlayStory()
     {
         Debug.Log("StartStory");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
     public void PlayEndless()
@@ -23,5 +25,19 @@ public class MainMenuScript : MonoBehaviour
     public void DebugMode() 
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void OpenClearConfirmScreen()
+    {
+        ClearConfirmScreen.SetActive(true);
+    }
+    public void CloseClearConfirmScreen()
+    {
+        ClearConfirmScreen.SetActive(false);
+    }
+
+    public void DeleteAllPlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }

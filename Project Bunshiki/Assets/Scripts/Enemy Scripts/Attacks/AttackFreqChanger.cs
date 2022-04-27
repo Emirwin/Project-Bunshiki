@@ -8,8 +8,10 @@ public class AttackFreqChanger : Attack
     {
         QuadTime,
         DoubleTime,
+        OneAndHalfTimeFaster,
         HalfTime,
         QuarterTime,
+        OneAndHalfTime,
         ResetTime
 
     }
@@ -46,6 +48,14 @@ public class AttackFreqChanger : Attack
         else if(aggressionModifier == fixedTimes.QuarterTime)
         {
             gameManager.enemyScript.ReplaceAggression(temp*4);
+        }
+        else if(aggressionModifier == fixedTimes.OneAndHalfTimeFaster)
+        {
+            gameManager.enemyScript.ReplaceAggression(temp/1.5f);
+        }
+        else if(aggressionModifier == fixedTimes.OneAndHalfTime)
+        {
+            gameManager.enemyScript.ReplaceAggression(temp*1.5f);
         }
         else
         {

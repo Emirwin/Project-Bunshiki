@@ -10,11 +10,12 @@ public class Yakuyaki : Spell
     private List<int> alreadySolved; //
     public GameObject activeProblem;
     public bool noActiveProblem = false;
+    [SerializeField]
     private bool lastProblem = false;
 
     public override void Update()
     {
-        if(noActiveProblem && !lastProblem) 
+        if(activeProblem.Equals(null) && !lastProblem) 
         {
             int randomChoice = Random.Range(0,problems.Count);
             SpawnProblem(problems[randomChoice]);
@@ -25,7 +26,7 @@ public class Yakuyaki : Spell
             }
             noActiveProblem = false;
         }
-        if(lastProblem && noActiveProblem)
+        if(lastProblem && activeProblem.Equals(null))
         {
             spellManager.GetComponent<SpellManager>().onRitual = false;
         }
@@ -42,10 +43,11 @@ public class Yakuyaki : Spell
         }
     }
     
-    public void SpawnProblem(GameObject problem)
+    public virtual void SpawnProblem(GameObject problem)
     {
+        Vector3 problemPos = problem.transform.position;
         Debug.Log($"Spawning {problem}");
-        Instantiate(problem, problem.transform.position, Quaternion.identity, gameObject.transform);
+        activeProblem = Instantiate(problem, problemPos, Quaternion.identity, gameObject.transform);
         
     }
 }

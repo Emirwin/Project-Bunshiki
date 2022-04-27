@@ -98,7 +98,13 @@ MonoBehaviour:
   enemyCurrentAggression: 10
   enemyMaxAgression: 0
   enemyAttacks:
-  - {fileID: -4405729465806972870, guid: 22bf518356c146947a095776b79fa7a5, type: 3}
+  - {fileID: 7626595956130968448, guid: 04790243d956fa944a074048f795076f, type: 3}
+  - {fileID: 436988768440107392, guid: 2617904141d6dc74096a31599016be09, type: 3}
+  - {fileID: 507709331022351126, guid: 39285d299ec543344ae587dbc3c25cb1, type: 3}
+  - {fileID: 507709331022351126, guid: 39285d299ec543344ae587dbc3c25cb1, type: 3}
+  - {fileID: 507709331022351126, guid: 39285d299ec543344ae587dbc3c25cb1, type: 3}
+  - {fileID: 436988768440107392, guid: 76f3f4a3176a99c4fab781375835fc1f, type: 3}
+  - {fileID: 3409176891019177522, guid: 575368ee022b4c84f9a4bba0be2dd5bb, type: 3}
   currentAttack: 0
   attackCount: 2
   attackCounter: 0

@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentenceAmmo:
-  - {fileID: 6956942144748133507, guid: 16335cbc8f923ea4da0bda0aa249edb3, type: 3}
+  - {fileID: 6956942144748133507, guid: 4fcd86109dea96f4d8458bd54db254ee, type: 3}
   newestSentence: {fileID: 0}
   gameManager: {fileID: 0}
   spawnPosXOffset: 0

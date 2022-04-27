@@ -7,7 +7,7 @@ public abstract class Spell : MonoBehaviour
 {
     public GameObject spellManager;
     //When a spell is instantiated, it starts the ritual
-
+    public string element;
     public int manaCost;
     public int score = 0;
     public TextMeshPro scoreUI;

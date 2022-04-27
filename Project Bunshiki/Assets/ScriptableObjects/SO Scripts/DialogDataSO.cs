@@ -7,4 +7,5 @@ using UnityEngine;
 public class DialogDataSO : ScriptableObject
 {
     public List<string> lines;
+    public List<string> character;
 }

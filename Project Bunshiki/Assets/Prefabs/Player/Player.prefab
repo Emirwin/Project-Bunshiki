@@ -98,6 +98,7 @@ MonoBehaviour:
   playerHitPoints: 12
   playerManaPoints: 6
   isInvulnerable: 0
+  playerSprite: {fileID: 2182843623890709719}
   playerBullet: {fileID: 5822185504028213785, guid: 7fa94f63e9e8a1b4191d1980b77440c4, type: 3}
   bulletsSlowed: 0
   bulletSpeedModifier: 1

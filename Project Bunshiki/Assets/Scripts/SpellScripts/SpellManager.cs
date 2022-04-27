@@ -93,7 +93,8 @@ public class SpellManager : MonoBehaviour
         Debug.Log($"Score: {activeSpell.GetComponent<Spell>().score}!");
 
         //Deal damage to enemy equal to score
-        gameManager.enemyTakeDamage(activeSpell.GetComponent<Spell>().score);
+        gameManager.enemyTakeDamage(activeSpell.GetComponent<Spell>().score,
+                                    activeSpell.GetComponent<Spell>().element);
 
         //Before destroying the spell, first stop the timer if it was still running
         StopAllCoroutines();

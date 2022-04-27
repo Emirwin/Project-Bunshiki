@@ -15,31 +15,43 @@ public class SakanoboriMiniCollision : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         sakanoboriScript.activeProblem = GameObject.FindGameObjectWithTag("ActiveProblem");
-
-        if(other.CompareTag("Water"))
+        
+        if(other.CompareTag("StartSakanobori"))
         {
-            sakanoboriScript.ResetMini(startPosition);
-            sakanoboriScript.NextProblem();
-        }
 
-        if(other.CompareTag("Mist")) //
+        }
+        else if(other.CompareTag("Water"))
+        {
+            sakanoboriScript.PlayLandOnSE("water");
+            sakanoboriScript.StopMini();
+            sakanoboriScript.nextProblemButton.SetActive(true);
+        }
+        else if(other.CompareTag("Mist")) //
         {
             sakanoboriScript.StopMini();
         }
-
-        if(other.CompareTag("Choice"))
+        else if(other.CompareTag("Choice"))
         {
-            int choicePtValue = other.GetComponent<SakanoboriChoices>().pointValue;
-            int choiceXPosition = other.GetComponent<SakanoboriChoices>().choiceXPos;
+            SakanoboriChoices choice = other.GetComponent<SakanoboriChoices>();
+            int choicePtValue = choice.pointValue;
+            int choiceXPosition = choice.choiceXPos;
             
             other.GetComponent<SakanoboriChoices>().Demist();
 
             if(choicePtValue>0){
+                //Play Correct Particle
+                choice.PlayCorrectEffect();
+                sakanoboriScript.PlayLandOnSE("water");
+
                 sakanoboriScript.UpdateScore(choicePtValue);
                 
                 StartCoroutine(CorrectCoroutine(0.5f,choiceXPosition));
             }
             else {
+                //Play Incorrect Particle
+                choice.PlayWrongEffect();
+                sakanoboriScript.PlayLandOnSE("rock");
+
                 sakanoboriScript.NextMini();
             }
             
@@ -65,7 +77,5 @@ public class SakanoboriMiniCollision : MonoBehaviour
                 sakanoboriScript.Jump(Sakanobori.jumpDirection.Left);
                 break;
         }
-
-
     }
 }

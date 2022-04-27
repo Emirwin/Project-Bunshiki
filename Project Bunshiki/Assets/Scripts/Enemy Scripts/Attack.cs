@@ -75,7 +75,7 @@ public abstract class Attack : MonoBehaviour
             gameManager.enemyScript.ChangeAggression(aggressionModifier);
             gameManager.enemyScript.ChangeCount(numberOfAttacksToSpawn);
         }
-        if(gameManager.enemyScript.isLastAttack)
+        if(gameManager.enemyScript.IsLastAttack())
         {
             Debug.Log("Last Attack");
             gameManager.enemyScript.ResetAggression();

@@ -5,20 +5,26 @@ using Doublsb.Dialog;
 
 public class StoryTest : MonoBehaviour
 {
-    public DialogManager DialogManager;
+    public DialogManager DManager;
 
     public GameObject[] Example;
     public DialogDataSO dData;
 
-    void Awake()
+    void OnEnable()
     {
+        
+        Debug.Log($"{DManager.state}"); //prints TRUE
         var dialogTexts = new List<DialogData>();
 
-        dialogTexts.Add(new DialogData(dData.lines[0],"Yo"));
-        dialogTexts.Add(new DialogData(dData.lines[1],"Yo"));
-        dialogTexts.Add(new DialogData(dData.lines[2],"Yo"));
+        for(int i = 0; i < dData.lines.Count; i++)
+        {
+            dialogTexts.Add(new DialogData(dData.lines[i],dData.character[i]));
+        }
 
-        DialogManager.Show(dialogTexts);
+        DManager.Show(dialogTexts);
+
+        Debug.Log($"{DManager.state}"); //prints TRUE
+        //gameObject.SetActive(false);
     }
     
 }

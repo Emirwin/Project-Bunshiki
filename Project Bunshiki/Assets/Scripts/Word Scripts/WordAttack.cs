@@ -13,6 +13,9 @@ public class WordAttack : MonoBehaviour
     public TextMeshPro textRenderer;
     public Color32 damageColor = new Color32(255,175,175,255);
 
+    public ChoiceSE choiceSE;
+    private bool isSEPlayed = false;
+
     private IEnumerator coroutine;
     void Start()
     {
@@ -23,9 +26,26 @@ public class WordAttack : MonoBehaviour
     {
         if(hitPoints==0)
         {
+            if(manaValue>0 && choiceSE!=null && !isSEPlayed)
+            {
+                isSEPlayed = true;
+                gameManager.GetComponent<GameManager>().playerUpdateMana(manaValue);
+                choiceSE.PlayCorrectEffect();
+            }
+            else if(choiceSE!=null && manaValue<=0 && !isSEPlayed)
+            {
+                isSEPlayed = true;
+                gameManager.GetComponent<GameManager>().playerUpdateMana(manaValue);
+                choiceSE.PlayWrongEffect();
+            }
             //Once destroyed add to mana
-            gameManager.GetComponent<GameManager>().playerUpdateMana(manaValue);
-            Destroy(gameObject);
+            
+            if(choiceSE==null)
+            {
+                gameManager.GetComponent<GameManager>().playerUpdateMana(manaValue);
+                Destroy(gameObject);
+            }
+            
             
         }
     }

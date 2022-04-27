@@ -386,13 +386,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spellManager: {fileID: 0}
+  element: Fire
   manaCost: 4
   score: 0
   scoreUI: {fileID: 0}
   countdownUI: {fileID: 0}
-  durationSeconds: 20
+  durationSeconds: 30
   problems:
   - {fileID: 4906744679086268913, guid: cc8e1a6043a0b6f4a993a92d4fb6eda7, type: 3}
-  - {fileID: 4906744679086268913, guid: da5e5548dbc06d64dba7ef20377bc446, type: 3}
+  - {fileID: 4906744679086268913, guid: cc8e1a6043a0b6f4a993a92d4fb6eda7, type: 3}
+  - {fileID: 4906744679086268913, guid: cc8e1a6043a0b6f4a993a92d4fb6eda7, type: 3}
   activeProblem: {fileID: 0}
   noActiveProblem: 0
+  lastProblem: 0

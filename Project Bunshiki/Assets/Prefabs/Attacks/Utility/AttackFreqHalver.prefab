@@ -50,4 +50,4 @@ MonoBehaviour:
   numberToSpawn: 0
   aggressionMod: 0
   attackSpeedModifier: 1
-  aggressionModifier: 2
+  aggressionModifier: 3

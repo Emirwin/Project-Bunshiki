@@ -15,6 +15,11 @@ public class Sakanobori : Yakuyaki
     private Vector2 prevDestination;
     public bool isMiniMoving = false;
 
+    public GameObject nextProblemButton;
+
+    public AudioSource mySE;
+    public AudioClip jumpSE, landOnWaterSE, landOnRocksSE;
+
     public override void Start()
     {
         miniPlayerRb = miniPlayer[currMini].GetComponent<Rigidbody2D>();
@@ -46,6 +51,7 @@ public class Sakanobori : Yakuyaki
     }
     public void Jump(jumpDirection direction)
     {
+        mySE.PlayOneShot(jumpSE);
         if(direction==jumpDirection.Left) {
             //miniPlayerSprite[currMini].transform.rotation = new Quaternion(0,0,-0.310049385f,0.950720489f);
             miniPlayer[currMini].GetComponent<SakanoboriMiniCollision>().miniSprite.transform.rotation = new Quaternion(0,0,0.5f,0.866025388f);
@@ -102,7 +108,7 @@ public class Sakanobori : Yakuyaki
         StopMini();
         miniPlayer[currMini].GetComponent<SakanoboriMiniCollision>().miniSprite.transform.rotation = new Quaternion(0,0,0,1);
 
-        miniPlayer[currMini].GetComponent<SakanoboriMiniCollision>().miniSprite.transform.position = miniPlayer[currMini].GetComponent<SakanoboriMiniCollision>().startPosition;
+        miniPlayer[currMini].GetComponent<SakanoboriMiniCollision>().transform.position = miniPlayer[currMini].GetComponent<SakanoboriMiniCollision>().startPosition;
 
         currDestination = Vector2.zero;
         prevDestination = currDestination;
@@ -111,7 +117,40 @@ public class Sakanobori : Yakuyaki
 
     public void NextProblem()
     {
+        Debug.Log("Next Problem");
+        StartCoroutine(DestroyProblemDelay());
+        ResetMini(miniPlayer[currMini].GetComponent<SakanoboriMiniCollision>().startPosition);
         
+        
+    }
+
+    public override void SpawnProblem(GameObject problem)
+    {
+        noActiveProblem = false;
+        nextProblemButton.SetActive(false);
+
+        Vector3 problemPos = problem.transform.position;
+        Debug.Log($"Spawning {problem}");
+        activeProblem = Instantiate(problem, problemPos, Quaternion.identity, gameObject.transform);
+        
+        
+    }
+
+    IEnumerator DestroyProblemDelay()
+    {
+        yield return new WaitForSeconds(0.1f);
         Destroy(activeProblem);
+    }
+
+    public void PlayLandOnSE(string landOnWhat)
+    {
+        if(landOnWhat == "water")
+        {
+            mySE.PlayOneShot(landOnWaterSE);
+        }
+        else if(landOnWhat == "rock")
+        {
+            mySE.PlayOneShot(landOnWaterSE);
+        }
     }
 }

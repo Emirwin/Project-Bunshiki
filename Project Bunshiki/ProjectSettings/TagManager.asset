@@ -15,6 +15,7 @@ TagManager:
   - Mist
   - Water
   - Choice
+  - StartSakanobori
   layers:
   - Default
   - TransparentFX
