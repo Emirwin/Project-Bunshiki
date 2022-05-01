@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8cb804cf1a4344288c98d14cd878c2, type: 3}
+  m_Name: Level01-BeforeStory
+  m_EditorClassIdentifier: 
+  lines:
+  - /color:lightblue/With the demons gone in a puff of smoke, you follow Yoshiko
+    who floats up a staircase.
+  - "\u201C...I\u2019m what\u2019s called a shikigami. Well, more specifically, grammar
+    shikigami.\u201D"
+  - "\u201CWe were made and fought alongside exorcists a very long time ago. In short
+    we\u2019re not meant to be alone and can only use spells with a human.\u201D"
+  - "\u201CWe fought demons, of course. And this place is basically their HQ! I don\u2019t
+    know how we got here but I do know that the way out is up.\u201D"
+  - "\u201C/emote:Happy/So, um, /sound:yoroshiku/let\u2019s do our best to get out
+    of this place!\u201D"
+  - ...
+  - "\u201CI think we\u2019re finally out of that basement level. Now this place
+    I think should be the main dungeons\u2026 I sense some demons up ahead!\u201D"
+  character:
+  - 
+  - Yoshiko
+  - Yoshiko
+  - Yoshiko
+  - Yoshiko
+  - 
+  - Yoshiko

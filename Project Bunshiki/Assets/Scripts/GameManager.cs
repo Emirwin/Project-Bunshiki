@@ -36,6 +36,7 @@ public partial class GameManager : MonoBehaviour
     public Enemy enemyScript;
     public GameObject enemyHealthBar;
     public BarScript enemyHpScript;
+    public EnemyLeftCounter enemiesLeftCounter; 
     public List<GameObject> nextEnemies; private int nxtEnemyCounter = 0;
 
     public GameObject enemyContainer;
@@ -60,6 +61,7 @@ public partial class GameManager : MonoBehaviour
         hpScript = healthBar.GetComponent<BarScript>();
         manaScript = manaBar.GetComponent<BarScript>();
         playerScript = playerObject.GetComponent<Player>();
+        enemiesLeftCounter.ChangeText($"{nextEnemies.Count}");
 
         if(enemyObject != null)
         {
@@ -112,7 +114,7 @@ public partial class GameManager : MonoBehaviour
                 }
             }
             Debug.Log($"{(story.GetComponent<StoryTest>().DManager.state).Equals(Doublsb.Dialog.State.Deactivate)}");
-            if(!enemyScript.enabled && deactivateCounter>2)
+            if(!enemyScript.enabled && deactivateCounter>10)
             {
                 
                 enemyScript.enabled = true;
@@ -127,15 +129,19 @@ public partial class GameManager : MonoBehaviour
             //TODO Spawn new enemy if there is an enemy next in line?
             if(nextEnemies.Count != 0 && nextEnemies.Count != nxtEnemyCounter)
             {
+                Vector3 enemySpawnPos = enemyContainer.GetComponent<EnemyContainerReferences>().EnemySpawnPoint.transform.position;
                 enemyObject = Instantiate(nextEnemies[nxtEnemyCounter],
-                                            Vector3.zero,
+                                            enemySpawnPos,
                                             Quaternion.identity,
                                             enemyContainer.transform);
                 enemyScript = enemyObject.GetComponent<Enemy>();
                 enemyHpScript = enemyHealthBar.GetComponent<BarScript>();
                 enemyHpScript.InitializeBar(enemyScript.hitPoints);
 
+                enemyScript.enabled = true;
+
                 nxtEnemyCounter++;
+                enemiesLeftCounter.ChangeText($"{nextEnemies.Count - nxtEnemyCounter}");
 
             } //otherwise go to end story state and then score state
             else if(story != null)
@@ -287,6 +293,17 @@ public partial class GameManager : MonoBehaviour
         }
     }
 
+    void ChangeSpeedCurrentAttacksModi(float newMod, string tags)
+    {
+        GameObject[] sceneEnemyAttacks = GameObject.FindGameObjectsWithTag(tags);
+        Debug.Log(sceneEnemyAttacks);
+
+        for(int i = 0; i < sceneEnemyAttacks.Length; i++)
+        {
+            sceneEnemyAttacks[i].GetComponent<MoveScript>().modifier=newMod;
+        }
+    }
+
     void ChangeSpeedCurrentBullets(float multiplier, string tags)
     {
         GameObject[] scenePlayerBullets = GameObject.FindGameObjectsWithTag(tags);
@@ -295,6 +312,17 @@ public partial class GameManager : MonoBehaviour
         for(int i = 0; i < scenePlayerBullets.Length; i++)
         {
             scenePlayerBullets[i].GetComponent<MoveScript>().modifier*=multiplier;
+        }
+    }
+
+    void ChangeSpeedCurrentBulletsModi(float newMod, string tags)
+    {
+        GameObject[] scenePlayerBullets = GameObject.FindGameObjectsWithTag(tags);
+        Debug.Log(scenePlayerBullets);
+
+        for(int i = 0; i < scenePlayerBullets.Length; i++)
+        {
+            scenePlayerBullets[i].GetComponent<MoveScript>().modifier=newMod;
         }
     }
 
@@ -313,6 +341,8 @@ public partial class GameManager : MonoBehaviour
     public void PauseGame()
     {
         ChangeSpeedSightBGModi(0);
+        ChangeSpeedCurrentAttacksModi(0, "EnemyAttack");
+        ChangeSpeedCurrentBulletsModi(0, "Bullet");
         playerScript.DisablePlayerMovement();
         enemyScript.StopAttack();
     }
@@ -320,6 +350,8 @@ public partial class GameManager : MonoBehaviour
     public void ResumeGame()
     {
         ChangeSpeedSightBGModi(1);
+        ChangeSpeedCurrentAttacksModi(1, "EnemyAttack");
+        ChangeSpeedCurrentBulletsModi(1, "Bullet");
         playerScript.EnablePlayerMovement();
         enemyScript.StartAttack();
     }

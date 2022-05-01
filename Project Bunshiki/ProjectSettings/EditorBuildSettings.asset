@@ -15,9 +15,18 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelect.unity
     guid: 1a4319db39fb47a4e8425eea474f3299
   - enabled: 1
-    path: Assets/Scenes/LevelDemo.unity
-    guid: a756885f197ed2742b06b75c239069d1
+    path: Assets/Scenes/Level00a-SimpleSentence.unity
+    guid: c5f1897829447614c99e12bb00d22804
+  - enabled: 1
+    path: Assets/Scenes/Level00b-SimpleSentence.unity
+    guid: b4b689c7b72609d4fa657909b491ce0a
+  - enabled: 1
+    path: Assets/Scenes/Level01a-NamelessCorridors.unity
+    guid: a42bcd91966b0524680207a5b629b155
   - enabled: 1
     path: Assets/Scenes/StoryUnderConstruction.unity
     guid: 7994ab0c9617ca54bab56fd3e1b90873
+  - enabled: 1
+    path: Assets/Scenes/LevelDemo.unity
+    guid: a756885f197ed2742b06b75c239069d1
   m_configObjects: {}

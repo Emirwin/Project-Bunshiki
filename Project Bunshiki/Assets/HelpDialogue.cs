@@ -17,7 +17,7 @@ public class HelpDialogue : MonoBehaviour
         {
             deactivateCounter++;
         }
-        if(deactivateCounter>2 && (DManager.Result != "Whatever"))
+        if(deactivateCounter>10 && (DManager.Result != "Whatever"))
         {
             deactivateCounter = 0;
             gameManager.ResumeGame();

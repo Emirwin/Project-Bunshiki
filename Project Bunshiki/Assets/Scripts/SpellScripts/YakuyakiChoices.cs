@@ -16,9 +16,10 @@ public class YakuyakiChoices : MonoBehaviour
     public AudioClip BurnSE;
     public GameObject CorrectSymbol;
     public GameObject WrongSymbol;
-    bool isSEPlayedFinished = false;
+    protected bool isSEPlayedFinished = false;
+    protected bool isClicked = false;
     
-    void Start()
+    public virtual void Start()
     {
         yakuyaki = GameObject.FindGameObjectWithTag("ActiveSpell").GetComponent<Yakuyaki>();
         if(pointValue<=0)
@@ -33,7 +34,7 @@ public class YakuyakiChoices : MonoBehaviour
             }
         }
     }
-    void Update()
+    public virtual void Update()
     {
         if(isSEPlayedFinished && pointValue>0)
         {
@@ -53,21 +54,27 @@ public class YakuyakiChoices : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    void OnMouseDown()
+    public virtual void OnMouseDown()
     {
         yakuyaki.activeProblem = GameObject.FindGameObjectWithTag("ActiveProblem");
-        if(pointValue>0)
-        {
-            //play Correct particle
-            PlayCorrectEffect();
 
-            yakuyaki.UpdateScore(pointValue);
-        }
-        else
+        if(!isClicked)
         {
-            //play Incorrect particle
-            PlayWrongEffect();
+            if(pointValue>0)
+            {
+                //play Correct particle
+                PlayCorrectEffect();
+
+                yakuyaki.UpdateScore(pointValue);
+            }
+            else
+            {
+                //play Incorrect particle
+                PlayWrongEffect();
+            }
+            isClicked = true;
         }
+        
         
     }
 

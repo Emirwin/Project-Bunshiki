@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7146976204555773469}
+  - component: {fileID: 1201717630506508760}
   m_Layer: 0
   m_Name: Position2
   m_TagString: Untagged
@@ -31,6 +32,18 @@ Transform:
   m_Father: {fileID: 758460074896252284}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1201717630506508760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55275724850191335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d771bb9e1929bb4468a1364c56f49732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &103371231461738012
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,6 +455,7 @@ MonoBehaviour:
   damageColor:
     serializedVersion: 2
     rgba: 4289703935
+  choiceSE: {fileID: 0}
 --- !u!1 &758460073691130037
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,6 +677,7 @@ MonoBehaviour:
   damageColor:
     serializedVersion: 2
     rgba: 4289703935
+  choiceSE: {fileID: 0}
 --- !u!50 &758460073691130032
 Rigidbody2D:
   serializedVersion: 4
@@ -920,6 +935,7 @@ MonoBehaviour:
   damageColor:
     serializedVersion: 2
     rgba: 4289703935
+  choiceSE: {fileID: 0}
 --- !u!50 &758460073855251334
 Rigidbody2D:
   serializedVersion: 4
@@ -1142,7 +1158,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.7191372, y: 1.5576451}
+  m_Offset: {x: -4.149591, y: 0.5342961}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1153,7 +1169,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5477781, y: 0.5682024}
+  m_Size: {x: 0.29193974, y: 0.63216174}
   m_EdgeRadius: 0
 --- !u!50 &758460074288592952
 Rigidbody2D:
@@ -1196,6 +1212,7 @@ MonoBehaviour:
   damageColor:
     serializedVersion: 2
     rgba: 4289703935
+  choiceSE: {fileID: 0}
 --- !u!1 &758460074395636802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,6 +1454,7 @@ MonoBehaviour:
   damageColor:
     serializedVersion: 2
     rgba: 4289703935
+  choiceSE: {fileID: 0}
 --- !u!1 &758460074722148763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,6 +1676,7 @@ MonoBehaviour:
   damageColor:
     serializedVersion: 2
     rgba: 4289703935
+  choiceSE: {fileID: 0}
 --- !u!50 &758460074722148757
 Rigidbody2D:
   serializedVersion: 4
@@ -2319,6 +2338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2376608985190476766}
+  - component: {fileID: 4811634510506095255}
   m_Layer: 0
   m_Name: Position1
   m_TagString: Untagged
@@ -2345,6 +2365,18 @@ Transform:
   m_Father: {fileID: 758460074896252284}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4811634510506095255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217550042004306567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d771bb9e1929bb4468a1364c56f49732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5556693323630836368
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cdaa6d69d028704daf094c1f82a9079, type: 3}
   m_Name: LevelDemo
   m_EditorClassIdentifier: 
-  levelIndex: 0
-  loadIndex: 3
+  levelIndex: 12
+  loadIndex: 7
   levelName: LevelDemo
   levelDescription: Welcome to Bunshiki
   topicsCovered:
   - Demo
   nameColor: {r: 0.20754719, g: 0, b: 0.07624, a: 1}
-  levelImage: {fileID: 0}
+  levelImage: {fileID: 21300000, guid: 08557b128c8bb954bb3e381bc07e6b3f, type: 3}
   sceneToLoad: {fileID: 102900000, guid: a756885f197ed2742b06b75c239069d1, type: 3}

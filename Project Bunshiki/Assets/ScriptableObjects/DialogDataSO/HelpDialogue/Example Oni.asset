@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8cb804cf1a4344288c98d14cd878c2, type: 3}
+  m_Name: Example Oni
+  m_EditorClassIdentifier: 
+  lines:
+  - '"Example Onis are low level demons. They like certain words or expressions and
+    will use them given the chance."'
+  - '"After telling you their favorite expression, they will spout sentences that
+    have that expression."'
+  - "\"After this, they\u2019ll ask you what the expression means in English! Shoot
+    down the correct meaning to get Mana points. Be Careful! Shooting the wrong one
+    costs mana points!\""
+  character:
+  - Yoshiko
+  - Yoshiko
+  - Yoshiko

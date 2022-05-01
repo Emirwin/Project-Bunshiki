@@ -12,6 +12,9 @@ public class LevelDisplay : MonoBehaviour
     [SerializeField] private Button playButton;
     [SerializeField] private GameObject lockIcon;
     [SerializeField] private Image levelImage;
+
+    public GameObject storyIcon, battleIcon;
+
     public void DisplayLevel(LevelSO _level)
     {
         levelName.text = _level.levelName;
@@ -26,11 +29,28 @@ public class LevelDisplay : MonoBehaviour
         if(levelUnlocked)
         {
             levelImage.color = Color.white;
+            switch (_level.levelDescription)
+            {
+                case "Story":
+                    battleIcon.SetActive(false);
+                    storyIcon.SetActive(true);
+                    break;
+                case "Combat":
+                    storyIcon.SetActive(false);
+                    battleIcon.SetActive(true);
+                    break;
+                default:
+                    break;
+            }
         }
         else
         {
+            battleIcon.SetActive(false);
+            storyIcon.SetActive(false);
             levelImage.color = Color.gray;
         }
+
+        
 
         playButton.onClick.RemoveAllListeners();
         //playButton.onClick.AddListener(()=> SceneManager.LoadScene(_level.sceneToLoad.name));
