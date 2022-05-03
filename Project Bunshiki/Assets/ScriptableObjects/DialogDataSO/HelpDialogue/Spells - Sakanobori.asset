@@ -13,9 +13,14 @@ MonoBehaviour:
   m_Name: Spells - Sakanobori
   m_EditorClassIdentifier: 
   lines:
-  - /emote:Bored/Sakanobori follows the journey of a carp that swims up the rapids.
-  - To gain favor, you must choose the path that makes a correct sentence. /emote:Normal/Remember
-    that the sentence is read up, left to right.
+  - '"Have you ever heard of a carp turning into a dragon? This ritual follows a
+    group of carp swimming up against the current."'
+  - '"Help them jump to the correct destination by clicking on the corresponding
+    button. Then once a carp reaches the other side, click the circle button to the
+    left. "'
+  - '"The correct destination is the word that would complete the sentence. Remember
+    that the sentence is read from the bottom, left-to-right."'
   character:
+  - Kei
   - Kei
   - Kei

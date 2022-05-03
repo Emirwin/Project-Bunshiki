@@ -24,6 +24,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Level01a-NamelessCorridors.unity
     guid: a42bcd91966b0524680207a5b629b155
   - enabled: 1
+    path: Assets/Scenes/Level01b-NamelessCorridors.unity
+    guid: e7bffef96d834974bbc3d2aeefc1399b
+  - enabled: 1
+    path: Assets/Scenes/Level02a-FestivalActs.unity
+    guid: 6fe504696457dc240b4693b9a7047f6f
+  - enabled: 1
+    path: Assets/Scenes/Level02b-FestivalActs.unity
+    guid: 23c3be2dccfde2049b048a058ff60cc1
+  - enabled: 1
+    path: Assets/Scenes/Level03a-InstantGetaway.unity
+    guid: 4d7a1d66befa17b4e9847fd18e1d4d0a
+  - enabled: 1
+    path: Assets/Scenes/Level03b-InstantGetaway.unity
+    guid: 6edcbdb4c9556724fb51b2386c87a22b
+  - enabled: 1
+    path: Assets/Scenes/Level04a-FountainofVoices.unity
+    guid: c6697bd99d35f8c4ca52af80df2ea969
+  - enabled: 1
     path: Assets/Scenes/StoryUnderConstruction.unity
     guid: 7994ab0c9617ca54bab56fd3e1b90873
   - enabled: 1

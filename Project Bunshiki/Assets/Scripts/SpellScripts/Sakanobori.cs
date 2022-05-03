@@ -20,6 +20,8 @@ public class Sakanobori : Yakuyaki
     public AudioSource mySE;
     public AudioClip jumpSE, landOnWaterSE, landOnRocksSE;
 
+    private bool noMoreFish = false;
+
     public override void Start()
     {
         miniPlayerRb = miniPlayer[currMini].GetComponent<Rigidbody2D>();
@@ -43,6 +45,10 @@ public class Sakanobori : Yakuyaki
         if(miniPlayerRb.velocity != Vector2.zero && !isMiniMoving) 
         {
             isMiniMoving = true;
+        }
+        if(noMoreFish && !nextProblemButton.activeInHierarchy)
+        {
+            nextProblemButton.SetActive(true);
         }
     }
 
@@ -97,6 +103,8 @@ public class Sakanobori : Yakuyaki
         else
         {
             Debug.Log("No more fish!");
+            noMoreFish = true;
+            nextProblemButton.SetActive(true);
         }
     
         miniPlayerLivesUI.text = $"{miniPlayerLives - currMini}";
@@ -119,13 +127,18 @@ public class Sakanobori : Yakuyaki
     {
         Debug.Log("Next Problem");
         StartCoroutine(DestroyProblemDelay());
-        ResetMini(miniPlayer[currMini].GetComponent<SakanoboriMiniCollision>().startPosition);
+        if(!noMoreFish)
+        {
+            ResetMini(miniPlayer[currMini].GetComponent<SakanoboriMiniCollision>().startPosition);
+
+        }
         
         
     }
 
     public override void SpawnProblem(GameObject problem)
     {
+        numberSpawned++;
         noActiveProblem = false;
         nextProblemButton.SetActive(false);
 

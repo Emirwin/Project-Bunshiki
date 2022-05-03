@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Level04b
   m_EditorClassIdentifier: 
   levelIndex: 9
-  loadIndex: 6
-  levelName: 4 Fountain of Voices
+  loadIndex: 12
+  levelName: 4b Fountain of Voices
   levelDescription: Combat
   topicsCovered:
   - HA~DESU

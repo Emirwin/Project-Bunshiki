@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelIndex: 0
   loadIndex: 3
-  levelName: 0 A Simple Sentence
+  levelName: 0a A Simple Sentence
   levelDescription: Story
   topicsCovered:
   - HA~DESU

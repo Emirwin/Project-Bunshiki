@@ -7,13 +7,13 @@ using TMPro;
 public class Yakuyaki : Spell
 {
     public int spellLevel = -1; 
-    [SerializeField] private int numberSpawned = 0;
+    [SerializeField] protected int numberSpawned = 0;
     public List<GameObject> problems;  //Problem prefabs
     private List<int> alreadySolved; //
     public GameObject activeProblem;
     public bool noActiveProblem = false;
     [SerializeField]
-    private bool lastProblem = false;
+    protected bool lastProblem = false;
 
     public override void Start()
     {

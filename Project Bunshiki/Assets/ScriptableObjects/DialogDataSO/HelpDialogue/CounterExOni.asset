@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8cb804cf1a4344288c98d14cd878c2, type: 3}
+  m_Name: CounterExOni
+  m_EditorClassIdentifier: 
+  lines:
+  - '"Counter Example Onis are what happens when example onis go into a rebellious
+    phase. Instead of having a favorite expression, they have more than one expression
+    that they pretend to like."'
+  - '"So like Example Onis they do the routine of saying examples with the different
+    expressions that should point out the difference between them. "'
+  - '"Then just go through their quiz on which one is more appropriate for a specific
+    sentence."'
+  character:
+  - Kei
+  - Kei
+  - Kei

@@ -6,9 +6,10 @@ public class FuushakariChoices : YakuyakiChoices
 {
     public GameObject answer;
     [SerializeField]private Fuushakari fuushakariScript;
-    private new GameObject referredWord = null;
+    //private new GameObject referredWord = null;
     public override void Start()
     {
+        referredWord = null;
         fuushakariScript = GameObject.FindGameObjectWithTag("ActiveSpell").GetComponent<Fuushakari>();
     }
     public override void Update()

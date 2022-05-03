@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8cb804cf1a4344288c98d14cd878c2, type: 3}
+  m_Name: Level04-BeforeStory
+  m_EditorClassIdentifier: 
+  lines:
+  - /color:lightblue/(Following Yoshiko, you walk around the garden toward the exit)
+  - "\u2026"
+  - (Huh? I recognize that rock somewhere)
+  - "\u2026"
+  - "/color:lightblue/\u201CHey, er, I think we\u2019re going in circles?\u201D"
+  - "\u201C/emote:Happy/Ahaha\u2026/emote:Sad//sound:shippai/Yeah I think we\u2019re
+    lost.\u201D"
+  - "/color:lightblue/\u201CWhat?!\u201D"
+  - "\u201C/sound:chinamini/There should be a clearing to the north of the fountain,
+    though.\u201D"
+  - "\u201CHuh? /emote:Happy/Why didn\u2019t you say that earlier?\u201D"
+  - "\u201C/sound:haa/No one ask-\u201D"
+  - "\u201C/emote:Happy/Alright! /sound:ikuzo/Let\u2019s goooo!\u201D"
+  - /color:lightblue/(Yoshiko flies around the fountain northward. You quickly follow
+    her)
+  - /color:lightblue/(You arrive at a wooden house that has windchimes decorated
+    all over it)
+  - "\u201C/sound:iitoomou/What a strangely comforting place. I could take a nap
+    here.\u201D"
+  - "/color:lightblue/\u201CYou\u2019re right, this place feels like home.\u201D"
+  - "\u201C/sound:soudane/I guess it wouldn\u2019t hurt to take a brea-\u201D"
+  - ...
+  - "/color:red/\u201CPsst\u201D"
+  - "\u201C/sound:shippai/Aah!\u201D"
+  - "/color:lightblue/\u201CWhat? A ghost?!\u201D"
+  - "\u201CAbove you! Yes, you. \u2026/emote:Angry/Leave this place quickly! There\u2019s
+    a demon who is roaming around here.\u201D"
+  - "\u201CHuh?/click/ Another shikigami? It\u2019s weird how I didn\u2019t notice\u201D"
+  - "\u201CWell, I blend pretty well among these windchimes, don\u2019t I? \u2026If
+    you don\u2019t intend to leave, I guess you\u2019ll have to fight with that human.\u201D"
+  - "/color:lightblue/\u201CYou won\u2019t help us?\u201D"
+  - "\u201CHmph! /emote:Sus/I need to make sure you\u2019re worthy. /emote:Happy/I\u2019m
+    a pretty powerful shikigami, after all. /sound:erai/The great Satoru!"
+  - "\u201C/emote:Bored/...Should we just leave?\u201D"
+  - "\u201C.../emote:Angry/No, /emote:Normal/ we have quite the experience dealing
+    with tests given by hanging decorations.\u201D"
+  character:
+  - 
+  - Yoshiko
+  - Yoshiko
+  - Yoshiko
+  - Yoshiko
+  - Yoshiko
+  - Yoshiko
+  - Kei
+  - Yoshiko
+  - Kei
+  - Yoshiko
+  - Yoshiko
+  - Yoshiko
+  - Kei
+  - Kei
+  - Yoshiko
+  - Yoshiko
+  - Yoshiko
+  - Yoshiko
+  - Yoshiko
+  - Satoru
+  - Yoshiko
+  - Satoru
+  - Satoru
+  - Satoru
+  - Kei
+  - Yoshiko

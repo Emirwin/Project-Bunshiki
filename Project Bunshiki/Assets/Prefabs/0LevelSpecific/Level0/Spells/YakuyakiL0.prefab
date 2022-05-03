@@ -391,14 +391,16 @@ MonoBehaviour:
   score: 0
   scoreUI: {fileID: 0}
   countdownUI: {fileID: 0}
-  durationSeconds: 30
+  durationSeconds: 60
   spellLevel: 3
   numberSpawned: 0
   problems:
-  - {fileID: 4906744679086268913, guid: 955e28c8c01d6a949803966f099a145f, type: 3}
   - {fileID: 4906744679086268913, guid: cd801f61812ece144b89f63c263f106f, type: 3}
-  - {fileID: 4906744679086268913, guid: cc8e1a6043a0b6f4a993a92d4fb6eda7, type: 3}
-  - {fileID: 4906744679086268913, guid: cc8e1a6043a0b6f4a993a92d4fb6eda7, type: 3}
+  - {fileID: 4906744679086268913, guid: 955e28c8c01d6a949803966f099a145f, type: 3}
+  - {fileID: 4906744679086268913, guid: 3afbc319e5a0a8745aea4d859cbc2458, type: 3}
+  - {fileID: 4906744679086268913, guid: 40351229e9199194aac8a7ce86a390f0, type: 3}
+  - {fileID: 4906744679086268913, guid: aacd2f4005be73e4fa73f793c559938a, type: 3}
+  - {fileID: 4906744679086268913, guid: 7fb8211eadac1d3498f02e14fa090823, type: 3}
   activeProblem: {fileID: 0}
   noActiveProblem: 0
   lastProblem: 0

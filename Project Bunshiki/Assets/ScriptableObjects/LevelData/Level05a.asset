@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Level05a
   m_EditorClassIdentifier: 
   levelIndex: 10
-  loadIndex: 6
-  levelName: 5 Permission to Exist
+  loadIndex: 12
+  levelName: 5a Permission to Exist
   levelDescription: Story
   topicsCovered:
   - HA~DESU

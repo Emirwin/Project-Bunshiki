@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51cb6bfcb48bc534c8eb9d37e3f3f3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHitPoints: 1
+  bulletHitPoints: 2
 --- !u!114 &-3785807011299064071
 MonoBehaviour:
   m_ObjectHideFlags: 0

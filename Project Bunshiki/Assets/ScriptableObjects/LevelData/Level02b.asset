@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Level02b
   m_EditorClassIdentifier: 
   levelIndex: 5
-  loadIndex: 6
-  levelName: 2 Festival of Acts
+  loadIndex: 8
+  levelName: 2b Festival of Acts
   levelDescription: Combat
   topicsCovered:
   - HA~DESU

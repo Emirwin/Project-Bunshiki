@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Level03a
   m_EditorClassIdentifier: 
   levelIndex: 6
-  loadIndex: 6
-  levelName: 3 Instant Getaway
+  loadIndex: 9
+  levelName: 3a Instant Getaway
   levelDescription: Story
   topicsCovered:
   - HA~DESU

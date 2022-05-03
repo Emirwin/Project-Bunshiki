@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8cb804cf1a4344288c98d14cd878c2, type: 3}
+  m_Name: Level03-BeforeStory
+  m_EditorClassIdentifier: 
+  lines:
+  - /color:lightblue/(After the festival, you go back to where you were headed the
+    last time and find yourselves in a sort of garden)
+  - "/color:lightblue/\u201CAll right! We\u2019re finally outside.\u201D"
+  - "\u201C/emote:Bored/Not exactly.\u201D"
+  - "/color:lightblue/\u201CWhat do you mean?\u201D"
+  - "\u201CHe means that we\u2019re not out of the woods yet.\u201D"
+  - "\u201CI meant that we\u2019re not yet outside, to be clearer.\u201D"
+  - "\u201CThat\u2019s what I said! /click/\u2026wait a minute, I remember you!\u201D"
+  - "/color:lightblue/\u201CYou know each other?\u201D"
+  - "\u201CNah\u2026/click/ MaybeI know OF her, I guess.\u201D"
+  - "\u201C/emote:Angry/\u2026/click//emote:Normal/This guy is Kei, he\u2019s a shikigami
+    that really likes to correct people and be annoying.\u201D"
+  - "\u201C/sound:haa/Sorry for that outburst. As she said, /sound:yoroshiku/I go
+    by Kei. I specialize in teaching ACTUAL grammar. You know, the one they teach
+    at schools.\u201D"
+  - "\u201C/emote:Angry//sound:haaa-q/Oh yeah? Well I-\u201D"
+  - "/color:lightblue/\u201CCalm down guys! \u2026Er, actually can we focus our anger
+    on the enemies currently surrounding us?\u201D"
+  character:
+  - 
+  - 
+  - Kei
+  - Kei
+  - Yoshiko
+  - Kei
+  - Yoshiko
+  - Yoshiko
+  - Kei
+  - Yoshiko
+  - Kei
+  - Yoshiko
+  - Yoshiko

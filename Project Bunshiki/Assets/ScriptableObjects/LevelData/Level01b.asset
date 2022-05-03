@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelIndex: 3
   loadIndex: 6
-  levelName: 1 Nameless Corridors
+  levelName: 1b Nameless Corridors
   levelDescription: Combat
   topicsCovered:
   - HA~DESU

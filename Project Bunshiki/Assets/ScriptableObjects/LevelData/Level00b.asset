@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelIndex: 1
   loadIndex: 4
-  levelName: 0 A Simple Sentence
+  levelName: 0b A Simple Sentence
   levelDescription: Combat
   topicsCovered:
   - HA~DESU

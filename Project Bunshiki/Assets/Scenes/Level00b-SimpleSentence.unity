@@ -13031,7 +13031,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 5c0cefc89d956be4f9331210bb143955, type: 3}
     - target: {fileID: 2182843623890709714, guid: d3ad7e9432c83704d91436bcf2f73217, type: 3}
       propertyPath: playerManaPoints
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2182843623890709714, guid: d3ad7e9432c83704d91436bcf2f73217, type: 3}
       propertyPath: playerShootSound

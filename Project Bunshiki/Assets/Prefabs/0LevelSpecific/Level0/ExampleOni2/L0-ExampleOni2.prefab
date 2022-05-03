@@ -56,6 +56,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: enemyCurrentAggression
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
       propertyPath: enemyDefAttack.Array.size
       value: 4
       objectReference: {fileID: 0}

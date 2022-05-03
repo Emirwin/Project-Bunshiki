@@ -803,7 +803,9 @@ MonoBehaviour:
   score: 0
   scoreUI: {fileID: 6283081154737351365}
   countdownUI: {fileID: 6283081153231072391}
-  durationSeconds: 30
+  durationSeconds: 60
+  spellLevel: -1
+  numberSpawned: 0
   problems:
   - {fileID: 8816326789305943727, guid: 724aa9c06fca3494ca48717bba1edf73, type: 3}
   - {fileID: 8816326789305943727, guid: 724aa9c06fca3494ca48717bba1edf73, type: 3}
