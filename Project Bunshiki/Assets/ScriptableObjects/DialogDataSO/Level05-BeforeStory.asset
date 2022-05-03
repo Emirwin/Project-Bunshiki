@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8cb804cf1a4344288c98d14cd878c2, type: 3}
+  m_Name: Level05-BeforeStory
+  m_EditorClassIdentifier: 
+  lines:
+  - "/emote:Happy/\u201C.../sound:sugoi/Wow! You\u2019re really strong.\u201D"
+  - "/emote:Happy/\u201C/sound:soudane/Of course! This human is going to be a great
+    exorcist, after all!\u201D"
+  - "/color:lightblue/\u201CPlease don\u2019t decide that yourself\u2026\u201D"
+  - "\u201CWell, I guess you passed. Go on along now, lest more monsters come /click/\u2026/emote:Happy/Haha!
+    /sound:baaka/You didn\u2019t really think I\u2019d come with you, right?\u201D"
+  - "/sound:eee/\u201CEhhh!\u201D"
+  - "/emote:Bored/\u201C/sound:haa/...He doesn\u2019t want to admit it but I think
+    he\u2019s stuck up there.\u201D"
+  - "\u201CWha-.../emote:Angry/No I\u2019m not! /sound:uwa/Hey, get away from me!\u201D"
+  - /color:lightblue/(You reach up and see a string holding him in place)
+  - "/emote:Happy/\u201CAhahaha! You poor thing\u2026 Want me to cut that string
+    for you?\u201D"
+  - "\u201C/emote:Angry/...\u201D"
+  - "\u201CHe probably couldn\u2019t have cut it himself with those short arms.\u201D"
+  - "/color:lightblue/\u201CAll right guys, stop teasing him. Here, I\u2019ll untie
+    the string.\u201D"
+  - "\u201CYeah! Lay off! \u2026/emote:Happy//sound:arigatou/You\u2019re a good guy
+    after all, huh, human!\""
+  - "\u201CYou\u2019re quicker to warm up than I thought! \u2026So does the great
+    Satoru has any ideas where to next?\u201D"
+  - "/emote:Happy/\u201CHehe! The general\u2019s castle, that\u2019s where. To get
+    there, we just follow the wind rising to the hill it\u2019s on.\u201D"
+  character:
+  - Satoru
+  - Yoshiko
+  - Yoshiko
+  - Satoru
+  - Yoshiko
+  - Kei
+  - Satoru
+  - Satoru
+  - Yoshiko
+  - Satoru
+  - Kei
+  - Kei
+  - Satoru
+  - Yoshiko
+  - Satoru

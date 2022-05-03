@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2890bcb7e9872094a8408facbd0b22db, type: 3}
+  m_Name: suu
+  m_EditorClassIdentifier: 
+  KANJI: "\u5438\u3046"
+  FURIGANA: "\u3059\u3046"
+  ROMAJI: suu
+  MEANINGS:
+  - 'Meaning 01: to smoke, to breathe in'
+  PARTOFSPEECH:
+  - Godan verb with u ending
+  - Transitive verb
+  COMMON: TRUE

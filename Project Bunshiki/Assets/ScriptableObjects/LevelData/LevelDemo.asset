@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LevelDemo
   m_EditorClassIdentifier: 
   levelIndex: 12
-  loadIndex: 7
+  loadIndex: 15
   levelName: LevelDemo
   levelDescription: Welcome to Bunshiki
   topicsCovered:

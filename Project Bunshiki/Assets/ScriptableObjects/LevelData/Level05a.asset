@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level05a
   m_EditorClassIdentifier: 
   levelIndex: 10
-  loadIndex: 12
+  loadIndex: 13
   levelName: 5a Permission to Exist
   levelDescription: Story
   topicsCovered:

@@ -38,4 +38,16 @@ public class ChoicePositionRand : MonoBehaviour
             choices[choiceNo].transform.position = newLocation[choiceNo];
         }
     }
+
+    public bool OneIsDestroyed()
+    {
+        for(int i = 0; i < choices.Count; i++)
+        {
+            if(choices[i].Equals(null) || choices[i] == null)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

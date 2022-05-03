@@ -15,6 +15,7 @@ public class MainMenuScript : MonoBehaviour
     public void PlayEndless()
     {
         Debug.Log("StartEndless");
+        SceneManager.LoadScene(16);
     }
 
     public void QuitGame()

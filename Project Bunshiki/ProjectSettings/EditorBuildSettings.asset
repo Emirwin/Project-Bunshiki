@@ -42,9 +42,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Level04a-FountainofVoices.unity
     guid: c6697bd99d35f8c4ca52af80df2ea969
   - enabled: 1
-    path: Assets/Scenes/StoryUnderConstruction.unity
-    guid: 7994ab0c9617ca54bab56fd3e1b90873
+    path: Assets/Scenes/Level04b-FountainofVoices.unity
+    guid: 51112dd8639fe0d408a7993073464763
+  - enabled: 1
+    path: Assets/Scenes/Level05a-PermissionExist.unity
+    guid: 1f1b3fd13f1d4bf4084923f54aeec985
+  - enabled: 1
+    path: Assets/Scenes/Level05b-PermissionExist.unity
+    guid: ad5739479fd83b94cb664e5a3f9a77e2
   - enabled: 1
     path: Assets/Scenes/LevelDemo.unity
     guid: a756885f197ed2742b06b75c239069d1
+  - enabled: 1
+    path: Assets/Scenes/LevelEndless.unity
+    guid: bb4bd2665066f7547b5ef475c2e0949c
+  - enabled: 1
+    path: Assets/Scenes/StoryUnderConstruction.unity
+    guid: 7994ab0c9617ca54bab56fd3e1b90873
   m_configObjects: {}

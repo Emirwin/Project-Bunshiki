@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject gameOverScreen;
     public GameObject gameClearScreen;
+    public EndlessModeScorer endlessModeScorer;
     
     void OnEnable()
     {
@@ -56,6 +57,10 @@ public class UIManager : MonoBehaviour
 
     public void EnableGameOverScreen()
     {
+        if(gameManager.isEndlessMode)
+        {
+            endlessModeScorer.UpdateScore();
+        }
         gameOverScreen.SetActive(true);
     }
 

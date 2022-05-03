@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level05b
   m_EditorClassIdentifier: 
   levelIndex: 11
-  loadIndex: 12
+  loadIndex: 14
   levelName: 5b Permission to Exist
   levelDescription: Combat
   topicsCovered:

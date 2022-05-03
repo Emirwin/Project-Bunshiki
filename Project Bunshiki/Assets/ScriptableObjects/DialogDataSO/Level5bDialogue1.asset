@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8cb804cf1a4344288c98d14cd878c2, type: 3}
+  m_Name: Level5bDialogue1
+  m_EditorClassIdentifier: 
+  lines:
+  - "/emote:Happy//sound:yoroshiku/\"Human, it\u2019s not often I say this, but this
+    spell is on your hands now. Fuushakari, the wind spell!\u201D"
+  - "\u201CThis is a castle owned by one of the lower generals of the army of the
+    underworld. I hear that it\u2019s a tengu, so stay focused! /sound:ikuzo/Alright,
+    let\u2019s go!\u201D"
+  character:
+  - Satoru
+  - Satoru

@@ -54,6 +54,8 @@ public partial class GameManager : MonoBehaviour
     [SerializeField]
     private int deactivateCounter = 0;
 
+    public bool isEndlessMode = false; public int score = 0;
+
     void Awake()
     {
         spellManager = GameObject.Find("SpellManager").GetComponent<SpellManager>();
@@ -142,6 +144,17 @@ public partial class GameManager : MonoBehaviour
 
                 nxtEnemyCounter++;
                 enemiesLeftCounter.ChangeText($"{nextEnemies.Count - nxtEnemyCounter}");
+
+
+                //ENDLESS MODE CODE
+                if(isEndlessMode)
+                {
+                    score = score + enemyScript.hitPoints;
+                    if(nxtEnemyCounter == nextEnemies.Count)
+                    {
+                        nxtEnemyCounter = 0;
+                    }
+                }
 
             } //otherwise go to end story state and then score state
             else if(story != null)

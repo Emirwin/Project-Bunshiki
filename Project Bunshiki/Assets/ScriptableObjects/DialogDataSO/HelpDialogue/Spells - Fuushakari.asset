@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Spells - Fuushakari
   m_EditorClassIdentifier: 
   lines:
-  - /emote:Happy/Windmills harness the power of wind, representing a harmony between
-    mortals and nature.
-  - /emote:Sad/Many have fallen to disrepair... /emote:Angry/These became corrupted
-    and to purify them you have to spin the windmill in the direction that makes
-    a sentence that makes sense!
+  - '"To harness the power of winds, mankind have long built machines that do the
+    work for them. How wonderful it is to see a harmony between man and nature. "'
+  - '"This ritual is just the simple assembly of these windmills. The blades of the
+    windmill are numbered 1 to 4 and one of them will be broken!"'
+  - '"Click the button to the right of the word that you think is in that blade!
+    Order is important, but don''t worry because the correct numbering of the word
+    will be revealed if you got it wrong!"'
   character:
+  - Satoru
   - Satoru
   - Satoru
