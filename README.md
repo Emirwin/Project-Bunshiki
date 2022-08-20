@@ -1,7 +1,7 @@
 # Project-Bunshiki
 *Bunshiki* is a RPG with shmup elements designed to facilitate the acquisition of Japanese grammatical concepts. 
 ## Installation
-Download the game [here](). Open the folder that has "Bunshiki" in its name, and double-click to run the game on your computer.
+Download the game [here](https://drive.google.com/file/d/19mEIlZEFvMeeXzuFWGVWOzByPQK1jjnl/view). Open the folder that has "Bunshiki" in its name, and double-click to run the game on your computer.
 ## Basic Controls
 ### Main Menu
 Navigate the game with the mouse. You can click on the buttons to go to the next screens of the game.
