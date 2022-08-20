@@ -19792,7 +19792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7209380614139265818, guid: 29d5fc4d9cbe6b749aeb96a67bfcc6f2, type: 3}
       propertyPath: activeSpells.Array.size
-      value: 16
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7209380614139265818, guid: 29d5fc4d9cbe6b749aeb96a67bfcc6f2, type: 3}
       propertyPath: activeSpells.Array.data[1]

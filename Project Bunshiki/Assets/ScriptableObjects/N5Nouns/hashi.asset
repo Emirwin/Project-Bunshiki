@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d93c929b20b47ba498385a749771ef62, type: 3}
   m_Name: hashi
   m_EditorClassIdentifier: 
-  KANJI: "\u7BB8"
+  KANJI: "\u306F\u3057"
   FURIGANA: "\u306F\u3057"
   ROMAJI: hashi
   MEANINGS:

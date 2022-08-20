@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 6
-  manaValue: 2
+  manaValue: 1
   isIndestructible: 0
   gameManager: {fileID: 0}
   textRenderer: {fileID: 0}

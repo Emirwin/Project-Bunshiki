@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8cb804cf1a4344288c98d14cd878c2, type: 3}
+  m_Name: Grammar - ~HA~DESU
+  m_EditorClassIdentifier: 
+  lines:
+  - '"a-HA b-DESU is a simple pattern for a Japanese sentence. It means that ''a
+    is b''"'
+  - '"So the sentence ''WATASHI HA TAMAGO DESU'' literally translates to ''I am an
+    egg''"'
+  - '"DESU here functions as the ''is, are'' of the sentence while ''HA'' (pronounced
+    wa) functions as the Topic Particle which means that the word before it is the
+    topic of the sentence."'
+  character:
+  - Yoshiko
+  - Yoshiko
+  - Yoshiko

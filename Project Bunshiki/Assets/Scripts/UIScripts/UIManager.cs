@@ -77,11 +77,22 @@ public class UIManager : MonoBehaviour
     public void LevelSelect()
     {
         Debug.Log(PlayerPrefs.GetInt("currentScene"));
+        UnlockNextLevel();    
+        Debug.Log(PlayerPrefs.GetInt("currentScene"));
+        SceneManager.LoadScene(2);
+    }
+
+    public void NextLevel()
+    {
+        UnlockNextLevel();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+    }
+
+    private void UnlockNextLevel()
+    {
         if(PlayerPrefs.GetInt("currentScene") < SceneManager.GetActiveScene().buildIndex-2)
         {
             PlayerPrefs.SetInt("currentScene", SceneManager.GetActiveScene().buildIndex-2);
-        }        
-        Debug.Log(PlayerPrefs.GetInt("currentScene"));
-        SceneManager.LoadScene(2);
+        }
     }
 }

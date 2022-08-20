@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7664911273773935857
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3274497045122984751, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2779044999581721229, guid: f221c0c7dcb9de140bfd90a107cf8d34, type: 3}
+    - target: {fileID: 3274497045122984784, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984784, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984784, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984784, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984784, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984784, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984784, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984784, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984784, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984784, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984784, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984785, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 00b0da56b462658478d02e072d00afa7, type: 2}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: hitPoints
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: enemyCurrentAggression
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: enemyAttacks.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: enemyDefAttack.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: enemyOffAttack.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: enemyAttacks.Array.data[0]
+      value: 
+      objectReference: {fileID: 436988768440107392, guid: 76f3f4a3176a99c4fab781375835fc1f, type: 3}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: enemyAttacks.Array.data[1]
+      value: 
+      objectReference: {fileID: 7626595956130968448, guid: 2cfa4e7655609464db08b1c6afe3b01b, type: 3}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: enemyAttacks.Array.data[2]
+      value: 
+      objectReference: {fileID: 3409176891019177522, guid: 86b54f0b730c21246a6d6b9a4a2f801f, type: 3}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: enemyAttacks.Array.data[3]
+      value: 
+      objectReference: {fileID: 3409176891019177522, guid: 59e664fe253d35c4bab8f5d8944ad0e3, type: 3}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: enemyAttacks.Array.data[4]
+      value: 
+      objectReference: {fileID: 3409176891019177522, guid: 575368ee022b4c84f9a4bba0be2dd5bb, type: 3}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: enemyAttacks.Array.data[5]
+      value: 
+      objectReference: {fileID: 3409176891019177522, guid: 575368ee022b4c84f9a4bba0be2dd5bb, type: 3}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: enemyDefAttack.Array.data[0]
+      value: 
+      objectReference: {fileID: 507709331022351126, guid: daafdfce87ddb6b4499276b43ac1faa6, type: 3}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: enemyDefAttack.Array.data[1]
+      value: 
+      objectReference: {fileID: 507709331022351126, guid: 18891000885ccde4a813a18b3ee4185f, type: 3}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: enemyDefAttack.Array.data[2]
+      value: 
+      objectReference: {fileID: 507709331022351126, guid: f2c6d782f20c152438ffa9f5dc17ddc5, type: 3}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: enemyDefAttack.Array.data[3]
+      value: 
+      objectReference: {fileID: 449308787640458405, guid: 7a6630ed478d5ef4b80e3639296cdeb5, type: 3}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: enemyOffAttack.Array.data[0]
+      value: 
+      objectReference: {fileID: 2103583371771110895, guid: 975af760af9657641851d14f0163cd91, type: 3}
+    - target: {fileID: 3274497045122984788, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: enemyOffAttack.Array.data[1]
+      value: 
+      objectReference: {fileID: 2103583371771110895, guid: 975af760af9657641851d14f0163cd91, type: 3}
+    - target: {fileID: 3274497045122984789, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: m_Name
+      value: L0-QuizOni 1 (mashita)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274497045122984799, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}
+      propertyPath: damageName
+      value: QuizOni_Damage
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 06df6abddf19ab241bc215c51a2c2958, type: 3}

@@ -17,7 +17,10 @@ MonoBehaviour:
   - '"Click on the expression or word that is NOT found in the Japanese text above."'
   - '"Expressions or words that are found in the text will burn their equivalent
     text. You can use this to your advantage but just be mindful of the time!"'
+  - '"Remember that you CAN click on the japanese words to get their meaning in the
+    word panel!"'
   character:
+  - Yoshiko
   - Yoshiko
   - Yoshiko
   - Yoshiko

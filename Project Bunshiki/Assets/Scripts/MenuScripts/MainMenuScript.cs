@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuScript : MonoBehaviour
 {
     public GameObject ClearConfirmScreen;
+    public GameObject CreditScreen;
     public void PlayStory()
     {
         Debug.Log("StartStory");
@@ -35,6 +36,15 @@ public class MainMenuScript : MonoBehaviour
     public void CloseClearConfirmScreen()
     {
         ClearConfirmScreen.SetActive(false);
+    }
+
+    public void OpenCreditScreen()
+    {
+        CreditScreen.SetActive(true);
+    }
+    public void CloseCreditScreen()
+    {
+        CreditScreen.SetActive(false);
     }
 
     public void DeleteAllPlayerPrefs()

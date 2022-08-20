@@ -1277,7 +1277,7 @@ GameObject:
   - component: {fileID: 580886338504424379}
   m_Layer: 0
   m_Name: Instruct
-  m_TagString: EnemyBullet
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2970,7 +2970,7 @@ GameObject:
   - component: {fileID: 3200578229390478598}
   m_Layer: 0
   m_Name: Instruct (2)
-  m_TagString: EnemyBullet
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
